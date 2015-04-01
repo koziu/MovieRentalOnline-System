@@ -8,9 +8,10 @@ namespace MovieRentalOnline.Models
     public class Genre
     {
         public Genre() { }
-        int GenreId { get; set; }
+        int GenreId { get; set; }   //klucz glowny
         string GenreName { get; set; }
+        public string IconFileName { get; set; }  //lokalizacja pliku z ikona, przyda sie przy budowie widokow
 
-        public virtual ICollection<Movie> Movies { get; set; }
+        public virtual ICollection<Movie> Movies { get; set; } //polaczone z wieloma filmami
     }
 }

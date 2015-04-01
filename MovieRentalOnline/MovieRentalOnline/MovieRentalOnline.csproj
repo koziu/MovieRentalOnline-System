@@ -176,6 +176,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\PhysicalProduct.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Rent.cs" />
     <Compile Include="Models\SoundTechnology.cs" />
     <Compile Include="Models\StorageMedium.cs" />
     <Compile Include="Models\VideoTechnology.cs" />
