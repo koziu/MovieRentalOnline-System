@@ -14,7 +14,7 @@ namespace MovieRentalOnline.Controllers
         public ActionResult Index()
         {
             // dodawanie nowych obiektow
-            Actor a1 = new Actor {FirstName = "nowyy", LastName = "nowyy", DateOfBirth = DateTime.Today};
+            Actor a1 = new Actor {FirstName = "ndsadas asdas", LastName = "asfd dasf  asfd", DateOfBirth = DateTime.Today};
             db.Actors.Add(a1);
             db.SaveChanges();
 
