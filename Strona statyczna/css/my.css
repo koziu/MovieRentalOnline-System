@@ -1,0 +1,85 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 20px;
+  background-color: #000;
+}
+
+
+.myCover {
+    width: 25%;    
+    display: inline-block;
+    position: relative;
+}
+
+.myActorFace
+{
+    width: 20%;    
+    display: inline-block;
+    position: relative;
+}
+
+.myTitle{
+    width: 100%;
+    position: absolute;
+    top: 10%;
+}
+.myCover div.myTitle p{
+    visibility: hidden
+}
+.myCover:hover div.myTitle p{
+    visibility: visible;
+    font-family: Cooper;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
+    text-align: center;
+    color: #000;
+}
+div.myCover img{
+    width: 100%;
+}
+
+.myActorFace div.myTitle p{
+    visibility: hidden
+}
+.myActorFace:hover div.myTitle p{
+    visibility: visible;
+    font-family: Cooper;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
+    text-align: center;
+    color: #000;
+}
+div.myActorFace img{
+    width: 100%;
+}
+
+.fill{
+    font-size: 0;
+}
+
+/*check list*/
+.state-icon {
+    left: -5px;
+}
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+    
+}
+
+.list-group-item{
+    padding: 3px;
+}
+
+
