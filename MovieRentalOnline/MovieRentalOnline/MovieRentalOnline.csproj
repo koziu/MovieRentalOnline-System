@@ -347,13 +347,10 @@
     <Content Include="Views\VideoTechnologies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-<<<<<<< HEAD
-    <Folder Include="Logic\" />
-=======
+    <Folder Include="App_Data\" /> 
+    <Folder Include="Logic\" />     
     <Folder Include="Content\css\" />
-    <Folder Include="Content\js\" />
->>>>>>> 6240893b1051d47f73b4373c6408faf4c0260937
+    <Folder Include="Content\js\" />  
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
