@@ -169,6 +169,7 @@
     <Compile Include="Controllers\LanguagesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\RentalController.cs" />
     <Compile Include="DAL\RentalContext.cs" />
     <Compile Include="DAL\RentalInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -192,10 +193,30 @@
     <Compile Include="Models\VideoTechnology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\RentalIndex.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\actors\1.jpg" />
+    <Content Include="Content\images\actors\2.jpg" />
+    <Content Include="Content\images\actors\3.jpg" />
+    <Content Include="Content\images\actors\4.jpg" />
+    <Content Include="Content\images\actors\5.jpg" />
+    <Content Include="Content\images\actors\6.jpg" />
+    <Content Include="Content\images\actors\7.jpg" />
+    <Content Include="Content\images\actors\9.jpg" />
+    <Content Include="Content\images\movies\10.jpg" />
+    <Content Include="Content\images\movies\11.jpeg" />
+    <Content Include="Content\images\movies\12.jpeg" />
+    <Content Include="Content\images\movies\2.jpeg" />
+    <Content Include="Content\images\movies\3.jpeg" />
+    <Content Include="Content\images\movies\4.jpg" />
+    <Content Include="Content\images\movies\5.jpeg" />
+    <Content Include="Content\images\movies\6.jpeg" />
+    <Content Include="Content\images\movies\7.jpeg" />
+    <Content Include="Content\images\movies\8.jpg" />
+    <Content Include="Content\images\movies\9.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -279,9 +300,14 @@
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Shared\_GuestLayout.cshtml" />
+    <Content Include="Views\Rental\Index.cshtml" />
+    <Content Include="Views\Rental\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

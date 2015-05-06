@@ -13,13 +13,9 @@ namespace MovieRentalOnline.Controllers
         private RentalContext db = new RentalContext();
         public ActionResult Index()
         {
-            // dodawanie nowych obiektow
-            Actor a1 = new Actor {FirstName = "nowyy", LastName = "nowyy", DateOfBirth = DateTime.Today};
-            db.Actors.Add(a1);
-            db.SaveChanges();
+            // dodawanie n
 
             // pobieranie obiektow z bazy
-            var lista = db.Actors.ToList();
 
 
             return View();
