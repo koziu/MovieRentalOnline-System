@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -16,6 +17,7 @@ namespace MovieRentalOnline.Models
         }
         public int MovieId { get; set; }   //klucz glowny
         public string Title { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string PhotoFileName { get; set; }    //lokalizacja pliku z plakatem/okladka, przyda sie przy budowie widokow

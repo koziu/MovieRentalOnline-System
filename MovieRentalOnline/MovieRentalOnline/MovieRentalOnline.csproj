@@ -169,7 +169,14 @@
     <Compile Include="Controllers\LanguagesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\PhysicalProductsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\RentalController.cs" />
+    <Compile Include="Controllers\RentsController.cs" />
+    <Compile Include="Controllers\SoundTechnologiesController.cs" />
+    <Compile Include="Controllers\StorageMediumsController.cs" />
+    <Compile Include="Controllers\VideoTechnologiesController.cs" />
     <Compile Include="DAL\RentalContext.cs" />
     <Compile Include="DAL\RentalInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -303,6 +310,41 @@
     <Content Include="Views\Shared\_GuestLayout.cshtml" />
     <Content Include="Views\Rental\Index.cshtml" />
     <Content Include="Views\Rental\List.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\PhysicalProducts\Create.cshtml" />
+    <Content Include="Views\PhysicalProducts\Delete.cshtml" />
+    <Content Include="Views\PhysicalProducts\Details.cshtml" />
+    <Content Include="Views\PhysicalProducts\Edit.cshtml" />
+    <Content Include="Views\PhysicalProducts\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Rents\Create.cshtml" />
+    <Content Include="Views\Rents\Delete.cshtml" />
+    <Content Include="Views\Rents\Details.cshtml" />
+    <Content Include="Views\Rents\Edit.cshtml" />
+    <Content Include="Views\Rents\Index.cshtml" />
+    <Content Include="Views\SoundTechnologies\Create.cshtml" />
+    <Content Include="Views\SoundTechnologies\Delete.cshtml" />
+    <Content Include="Views\SoundTechnologies\Details.cshtml" />
+    <Content Include="Views\SoundTechnologies\Edit.cshtml" />
+    <Content Include="Views\SoundTechnologies\Index.cshtml" />
+    <Content Include="Views\StorageMediums\Create.cshtml" />
+    <Content Include="Views\StorageMediums\Delete.cshtml" />
+    <Content Include="Views\StorageMediums\Details.cshtml" />
+    <Content Include="Views\StorageMediums\Edit.cshtml" />
+    <Content Include="Views\StorageMediums\Index.cshtml" />
+    <Content Include="Views\VideoTechnologies\Create.cshtml" />
+    <Content Include="Views\VideoTechnologies\Delete.cshtml" />
+    <Content Include="Views\VideoTechnologies\Details.cshtml" />
+    <Content Include="Views\VideoTechnologies\Edit.cshtml" />
+    <Content Include="Views\VideoTechnologies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,7 +372,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57851</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

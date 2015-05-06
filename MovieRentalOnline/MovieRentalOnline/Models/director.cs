@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -13,6 +14,7 @@ namespace MovieRentalOnline.Models
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Biography { get; set; }
         public string PhotoFileName { get; set; }  //lokalizacja pliku ze zdjeciem, przyda sie przy budowie widokow
 
