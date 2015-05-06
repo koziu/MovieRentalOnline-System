@@ -1,0 +1,84 @@
+﻿@model MovieRentalOnline.ViewModels.RentalIndex
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <br />
+    <div id="myCarousel" class="carousel slide">
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            @foreach (var movies in Model.MoviesList)
+            {
+
+                <div class="item @if(movies == Model.MoviesList.First()){<text>active</text>}">
+                    <div class="fill">
+                        @foreach (var movie in movies)
+                        {
+                            <div class="myCover">
+                                <div class="myTitle"><p>@movie.Title</p></div>
+                                <img alt="@movie.Title" src="/Content/images/movies/@movie.PhotoFileName">
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+
+    <br />
+    <div id="myCarousel2" class="carousel slide">
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            @foreach (var actors in Model.ActorsList)
+            {
+                <div class="item @if (actors == Model.ActorsList.First()){<text>active</text>}">
+                    <div class="fill">
+                        @foreach (var actor in actors)
+                        {
+
+                            <div class="myActorFace">
+                                <div class="myTitle"><p>@actor.FirstName @actor.LastName<p></div>
+                                <img alt="@actor.LastName " src="/Content/images/actors/@actor.PhotoFileName">
+
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+</div>
+
+
+<script src="/Content/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/Content/js/bootstrap.min.js"></script>
+<!-- Script to Activate the Carousel -->
+<script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+</script>
+
