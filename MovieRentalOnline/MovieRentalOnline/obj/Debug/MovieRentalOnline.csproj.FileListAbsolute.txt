@@ -50,6 +50,5 @@ C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRenta
 C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
 C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
 C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
