@@ -10,10 +10,17 @@ namespace MovieRentalOnline.DAL
     public class RentalContext : DbContext
     {
         public RentalContext() : base("RentalContext"){}
+<<<<<<< HEAD
+        //static RentalContext()
+        //{
+        //    Database.SetInitializer<RentalContext>(new RentalInitializer());
+        //}
+=======
         static RentalContext()
         {
             Database.SetInitializer<RentalContext>(new RentalInitializer());
         }
+>>>>>>> 6240893b1051d47f73b4373c6408faf4c0260937
         //a
         public DbSet<Actor> Actors {get; set;}
         public DbSet<Client> Clients {get; set;}

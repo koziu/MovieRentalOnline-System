@@ -10,6 +10,7 @@
 
 [Dd]ebug/
 [Rr]elease/
+x64/
 build/
 [Bb]in/
 [Oo]bj/
@@ -131,7 +132,6 @@ UpgradeLog*.htm
 App_Data/*.mdf
 App_Data/*.ldf
 
-
 #LightSwitch generated files
 GeneratedArtifacts/
 _Pvt_Extensions/
@@ -151,7 +151,4 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Mac desktop service store files
-.DS_Store
-MovieRentalOnline/MovieRentalOnline/App_Data/aspnet-MovieRentalOnline-20150329034152.mdf
-MovieRentalOnline/MovieRentalOnline/App_Data/aspnet-MovieRentalOnline-20150329034152_log.ldf
+

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,6 +11,7 @@ namespace MovieRentalOnline.Models
         public PhysicalProduct() { }
         public int PhysicalProductId { get; set; } //klucz glowny
         public int ProductId { get; set; } //polaczone z jednym produktem
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; } //opis np stanu plyty, nie podajemy do klientow
         public bool IsHidden { get; set; } // w momecie wycofania plyty, ukrywamy ja. Nie chcemy usuwać żeby nie tracić danych
 
