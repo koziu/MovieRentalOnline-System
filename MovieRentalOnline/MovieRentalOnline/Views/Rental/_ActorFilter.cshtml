@@ -1,0 +1,22 @@
+﻿@model ICollection<MovieRentalOnline.Models.Actor>
+@{
+    Layout = null;
+}
+
+<div id="actorFilters" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Aktorzy</h3>
+    </div>
+    <div class="panel-body" style="padding:5px;">
+            <div class="input-group">
+                <input id="addActor" type="search" name="searchQuery" data-autocomplete-source="@Url.Action("ActorSuggestions")" placeholder="Imię Nazwisko" />
+                <span class="input-group-btn" style="padding:0px;">
+                    <button class="btn btn-default button-small  btn-xs" type="button" onclick="addToActor();">Dodaj</button>
+                </span>
+            </div>
+            <ul id="actors" class="list-group" style=" margin-bottom:auto;"></ul>
+       
+    </div>
+</div>
+
+

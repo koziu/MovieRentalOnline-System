@@ -23,6 +23,7 @@ $(function () {
             $checkbox.prop('checked', !$checkbox.is(':checked'));
             $checkbox.triggerHandler('change');
             updateDisplay();
+            Filtr();
         });
         $checkbox.on('change', function () {
             updateDisplay();

@@ -1,102 +1,142 @@
-﻿@model ICollection<MovieRentalOnline.Models.Movie>
-@{
-    ViewBag.Title = "List";
+﻿@{
     Layout = "~/Views/Shared/_GuestLayout.cshtml";
+    ViewBag.Title = "List";
 }
 
 <div class="container-fluid" style="margin-top:15px;">
     <div class="row">
         <div class="col-md-3">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Gatunek</h3>
-                </div>
-                <div class="panel-body" style="padding:0px;">
-                    <div class="well well-sm" style="margin-bottom:auto;">
-                        <ul class="list-group checked-list-box" style="margin-bottom:auto;">
-                            <li class="list-group-item"><small>Horror</small></li>
-                            <li class="list-group-item" data-checked="true"><small>Akcji</small></li>
-                            <li class="list-group-item"><small>Thriller</small></li>
-                            <li class="list-group-item"><small>Komedia</small></li>
-                            <li class="list-group-item"><small>Dramat</small></li>
-                            <li class="list-group-item"><small>Komedio-dramat</small></li>
-                            <li class="list-group-item"><small>Science fiction</small></li>
-                            <li class="list-group-item"><small>Romans</small></li>
-                            <li class="list-group-item"><small>Przygodowy</small></li>
-                            <li class="list-group-item"><small>Animowany</small></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Nośnik</h3>
-                </div>
-                <div class="panel-body" style="padding:0px;">
-                    <div class="well well-sm" style="margin-bottom:auto;">
-                        <ul class="list-group checked-list-box" style="margin-bottom:auto;">
-                            <li class="list-group-item"><small>CD</small></li>
-                            <li class="list-group-item" data-checked="true"><small>Blue-ray</small></li>
-                            <li class="list-group-item"><small>DVD</small></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            @Html.Action("GenreFilter")
 
+            @Html.Action("StorageMediumFilter")
 
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Aktorzy</h3>
-                </div>
-                <div class="panel-body" style="padding:5px;">
-                    <form id="search-form" class="form-search" method="get" data-ajax="true" data-ajax-target="#productlist-section">
-                        <div class="input-group">
-                            <input type="text" class="form-control" style="padding:0px; height: 24.4px">
-                            <span class="input-group-btn" style="padding:0px;">
-                                <button class="btn btn-default button-small  btn-xs" type="button">Button</button>
-                            </span>
-                        </div>
-                        <ul class="list-group" style=" margin-bottom:auto;">
-                            <li class="list-group-item"><small><a href="#">Adam Małysz</a></small></liclass>
-                            <li class="list-group-item"><small><a href="#">sadgm Maaggz</a></small></li>
-                            <li class="list-group-item"><small><a href="#">asdfdsdam Asdasd</a></small></li>
-                        </ul>
-                    </form>
-                </div>
-            </div>
+            @Html.Action("ActorFilter")
         </div>
-        <div class="col-md-9">
-            @foreach(var movie in Model)
-            {
-            <div class="well">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <img alt="@movie.Title" src="/Content/images/movies/@movie.PhotoFileName" style="width:100%">
-                    </div>
-                    <div class="col-xs-10">
-                        <h2>@movie.Title<small>(@movie.ReleaseDate.Year)</small></h2>
-                        <p>
-                            @movie.Description
-                        </p>
-                    </div>
-                </div>
-            </div>
-            }
+        <div id="abc" class="col-md-9">
+            @Html.Action("ResoultList")
         </div>
     </div>
 </div>
 
 
 
-<!-- Page Content -->
-<!-- /.container -->
-<!-- jQuery -->
-<script src="/Content/js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/Content/js/bootstrap.min.js"></script>
-<!-- Script to Activate the Carousel -->
 
-<script src="/Content/js/checkbox.js"></script>
+
+
+@section ScriptsBottom {
+    <script src="/Content/js/jquery.js"></script>
+    <script src="/Content/js/jquery-ui.min.js"></script>
+    <script src="/Content/js/bootstrap.min.js"></script>
+
+    <script src="/Content/js/checkbox.js"></script>
+
+    <script>
+        var actorList = [];
+
+        function addToActor() {
+            var addActor = document.getElementById('addActor').value;
+            if (addActor != null && addActor != "" && $.inArray(addActor, actorList) == -1) {
+                actorList.push(addActor);
+
+                for (i = 0; i < actorList.length; i++) {
+                    var newActor = "<li class='list-group-item' onclick='removeRecord(" + i + ");'><small>" + actorList[i] + "</small></li>";
+                };
+                document.getElementById('actors').innerHTML += newActor;
+            }
+            Filtr();
+        }
+
+
+        function removeRecord(i) {
+            actorList.splice(i, 1);
+            var newActor = "";
+            // re-display the records from actorList the same way we did it in addToActor()
+            for (var i = 0; i < actorList.length; i++) {
+                newActor += "<li class='list-group-item' onclick='removeRecord(" + i + ");'><small>" + actorList[i] + "</small></li>";
+            };
+            document.getElementById('actors').innerHTML = newActor;
+            Filtr();
+        }
+    </script>
+
+    <script>
+        $(function () {
+
+            var setupAutoComplete = function () {
+                var $input = $(this);
+
+                var options = {
+                    source: $input.attr("data-autocomplete-source"),
+                    select: function (event, ui) {
+                        $input = $(this);
+                        $input.val(ui.item.label);
+                        var $form = $input.parents("form:first");
+                        addToActor();
+                        Filtr();
+                        // $form.submit();
+                    }
+                };
+
+                $input.autocomplete(options);
+            };
+            $("#addActor").each(setupAutoComplete);
+
+        });
+
+</script>
+
+
+    <script type="text/javascript">
+        function Filtr() {
+
+            var GenreFilters = [{ Genre: "" }];
+            GenreFilters.pop();
+
+            var genreList = document.getElementById("genreFilters").getElementsByClassName("active")
+            for (var i = 0; i < genreList.length; i++) {
+                var a = { Genre: genreList[i].textContent }
+                GenreFilters.push(a);
+            };
+
+
+            var ActorFilters = [{ Name: "" }];
+            ActorFilters.pop();
+
+            var actorList = document.getElementById("actorFilters").getElementsByTagName("li")
+            for (var i = 0; i < actorList.length; i++) {
+                var a = { Name: actorList[i].textContent }
+                ActorFilters.push(a);
+            };
+
+
+
+            var Filters = {
+                GenreFilter: GenreFilters,
+                ActorFilter: ActorFilters,
+            }
+            var Filters = JSON.stringify({ 'Filters': Filters })
+
+            var $form = $(this);
+
+            var settings = {
+                data: Filters,
+                url: "List",
+                contentType: "application/json; charset=utf-8",
+                // dataType: "json",
+                type: "POST"
+            };
+
+            $.ajax(settings).done(function (result) {
+                var $targetElement = "#resoult-section";
+                var $newContent = $(result);
+                $($targetElement).replaceWith($newContent);
+                $newContent.effect("slide");
+            });
+
+            return false;
+        };
+    </script>
+}
 

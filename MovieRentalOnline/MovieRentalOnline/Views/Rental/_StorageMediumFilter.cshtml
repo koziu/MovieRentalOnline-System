@@ -1,0 +1,20 @@
+﻿@model ICollection<MovieRentalOnline.Models.StorageMedium>
+@{
+    Layout = null;
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Nośnik</h3>
+    </div>
+    <div class="panel-body" style="padding:0px;">
+        <div class="well well-sm" style="margin-bottom:auto;">
+            <ul class="list-group checked-list-box" style="margin-bottom:auto;">
+                @foreach (var storageMedium in Model)
+                {
+                    <li class="list-group-item"><small>@storageMedium.Name</small></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

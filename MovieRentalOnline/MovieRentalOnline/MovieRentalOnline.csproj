@@ -193,6 +193,7 @@
     <Compile Include="Models\VideoTechnology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\FilterModel.cs" />
     <Compile Include="ViewModels\RentalIndex.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -303,6 +304,10 @@
     <Content Include="Views\Shared\_GuestLayout.cshtml" />
     <Content Include="Views\Rental\Index.cshtml" />
     <Content Include="Views\Rental\List.cshtml" />
+    <Content Include="Views\Rental\_ResoultList.cshtml" />
+    <Content Include="Views\Rental\_GenreFilter.cshtml" />
+    <Content Include="Views\Rental\_StorageMediumFilter.cshtml" />
+    <Content Include="Views\Rental\_ActorFilter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

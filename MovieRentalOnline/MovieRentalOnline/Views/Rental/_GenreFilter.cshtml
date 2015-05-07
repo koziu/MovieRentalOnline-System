@@ -1,0 +1,20 @@
+﻿@model ICollection<MovieRentalOnline.Models.Genre>
+@{
+    Layout = null;
+}
+
+<div id="genreFilters" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Gatunek</h3>
+    </div>
+    <div class="panel-body" style="padding:0px;">
+        <div class="well well-sm" style="margin-bottom:auto;">
+            <ul class="list-group checked-list-box" style="margin-bottom:auto;">
+                @foreach (var genre in Model)
+                {
+                    <li class="list-group-item"><small>@genre.GenreName</small></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
