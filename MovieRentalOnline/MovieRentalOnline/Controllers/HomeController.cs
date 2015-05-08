@@ -18,7 +18,7 @@ namespace MovieRentalOnline.Controllers
             // pobieranie obiektow z bazy
 
 
-            return View();
+            return View(db.Movies.ToList());
         }
 
         public ActionResult About()
