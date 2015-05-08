@@ -1,0 +1,35 @@
+﻿
+@model ICollection<MovieRentalOnline.Models.Movie>
+@{
+    Layout = null;
+}
+
+<div id="resoult-section">
+    @foreach (var movie in Model)
+    {
+        <div class="well">
+            <div class="row">
+                <div class="col-xs-2">
+                    <img alt="@movie.Title" src="/Content/images/movies/@movie.PhotoFileName" style="width:100%">
+                </div>
+                <div class="col-xs-10">
+                    <h2>@movie.Title<small>(@movie.ReleaseDate.Year)</small></h2>
+                    <p>
+                        @movie.Description
+                    </p>
+
+                    <ul>
+                        @foreach (var genre in movie.Genres)
+                        {
+                            <li>@genre.GenreName</li>
+                        }
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
