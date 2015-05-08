@@ -17,6 +17,7 @@ namespace MovieRentalOnline.Logic
         {
             this.session = session;
             this.db = db;
+            //
         }
 
         public void AddToCart(int productId, DateTime deliveryTime, DateTime returnTime)
