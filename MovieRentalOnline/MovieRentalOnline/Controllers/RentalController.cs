@@ -30,23 +30,91 @@ namespace MovieRentalOnline.Controllers
 
             RentalIndex viewModel = new RentalIndex();
 
-            viewModel.ActorsList = new List<List<Actor>>{a1,a2};
-            viewModel.MoviesList = new List<List<Movie>>{m1,m2};
+            viewModel.ActorsList = new List<List<Actor>> { a1, a2 };
+            viewModel.MoviesList = new List<List<Movie>> { m1, m2 };
 
 
             return View(viewModel);
         }
 
-        public ActionResult List()
+        public ActionResult List(FilterModel Filters = null)
         {
-            var movies = db.Movies.ToList();
-            return View(movies);
-        }
+            if (Request.IsAjaxRequest())
+            {
+                var movies = db.Movies.ToList();
+                if (Filters.ActorFilter != null)
+                {
+                    var actors = db.Actors.ToList();
+                    foreach (var actor in Filters.ActorFilter)
+                    {
+                        var names = actor.Name.Split(' ');
+                        foreach (var name in names)
+                        {
+                            actors = actors.Where(a => a.FirstName.ToLower().Contains(name.ToLower()) || a.LastName.ToLower().Contains(name.ToLower())).ToList();
+                        }
+                        movies = movies.Where(a => a.Actors.Any(b => actors.Contains(b))).ToList();
+                    }
+                }
 
-        public ActionResult Detail(int id)
-        {
+                if (Filters.GenreFilter != null)
+                {
+                    movies = movies.Where(a => a.Genres.Any(b => Filters.GenreFilter.Any(c => c.Genre == b.GenreName))).ToList();
+                }
+                return PartialView("_ResoultList", movies);
+            }
             return View();
         }
 
+        [ChildActionOnly]
+        public ActionResult ResoultList()
+        {
+
+            var movies = db.Movies.ToList();
+            return View("_ResoultList", movies);
+        }
+
+
+        [ChildActionOnly]
+        public ActionResult GenreFilter()
+        {
+            var genres = db.Genres.ToList();
+            return View("_GenreFilter", genres);
+        }
+
+        [ChildActionOnly]
+        public ActionResult StorageMediumFilter()
+        {
+            var storageMediums = db.StorageMediums.ToList();
+            return View("_StorageMediumFilter", storageMediums);
+        }
+
+        [ChildActionOnly]
+        public ActionResult ActorFilter()
+        {
+            var actors = db.Actors.ToList();
+            return View("_ActorFilter", actors);
+        }
+
+        public ActionResult ActorSuggestions(string term)
+        {
+            var actors = db.Actors.ToList();
+            var names = term.Split(' ');
+            foreach (var name in names)
+            {
+
+                actors = actors.Where(a => a.FirstName.ToLower().Contains(name.ToLower()) || a.LastName.ToLower().Contains(name.ToLower())).ToList();
+            }
+
+            var actor = actors.Take(5).Select(a => new { label = (a.FirstName + " " + a.LastName) });
+
+            return Json(actor, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult FiltrMovies(FilterModel Filters = null)
+        {
+            var actors = db.Actors.ToList();
+
+            return Json(actors, JsonRequestBehavior.AllowGet);
+        }
     }
 }
