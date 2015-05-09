@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="/Content/half-slider.css" rel="stylesheet">
+    <link href="~/Content/adminLayout.css" rel="stylesheet">
+   
+    @Scripts.Render("~/bundles/modernizr")
+
+    
+
+</head>
+<body> 
+    <nav id="navbar1" class="navbar navbar-default navbar-static-top" role="navigation" style="margin: 0;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Wypożyczalnia abc.pl", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Przeglądaj ofertę filmów", "List", "Rental")</li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Koszyk", "About", "Home")</li>
+                        <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                        <li>@Html.Partial("_LoginPartial")</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <hr>
+        <div class="container-fluid">            
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="accordion" id="leftMenu">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#">
+                                    <i class="icon-home"></i> Dashboard
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#collapseTwo">
+                                    <i class="icon-th"></i> Zarządzaj bazą filmów
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                    <ul>                                        
+                                        <li>@Html.ActionLink("Zarządzaj filmami", "Index", "Movies")</li>
+                                        <li>@Html.ActionLink("Zarządzaj aktorami", "Index", "Actors")</li>
+                                        <li>@Html.ActionLink("Zarządzaj reżyserami", "Index", "Directors")</li>
+                                        <li>@Html.ActionLink("Zarządzaj gatunkami", "Index", "Genres")</li>                                         
+                                    </ul>
+                                </div>
+                            </div>                                               
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#collapseThree">
+                                    <i class="icon-th-list"></i> Produkt
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                    <ul>
+                                        <li>@Html.ActionLink("Przeglądaj produkty", "Index", "Products")</li>
+                                        <li>@Html.ActionLink("Nośniki", "Index", "Actors")</li>
+                                        <li>@Html.ActionLink("Zarządzaj reżyserami", "Index", "Directors")</li>
+                                        <li>@Html.ActionLink("Zarządzaj gatunkami", "Index", "Genres")</li>  
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#collapseFour">
+                                    <i class="icon-list-alt"></i> Forms
+                                </a>
+                            </div>
+                            <div id="collapseFour" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                    <ul>
+                                        <li>This is one</li>
+                                        <li>This is two</li>
+                                        <li>This is Three</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#collapseFive">
+                                    <i class="icon-cog"></i> Plugins
+                                </a>
+                            </div>
+                            <div id="collapseFive" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                    <ul>
+                                        <li>This is one</li>
+                                        <li>This is two</li>
+                                        <li>This is Three</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#collapseSix">
+                                    <i class="icon-file"></i> Templates
+                                </a>
+                            </div>
+                            <div id="collapseSix" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                    <ul>
+                                        <li>This is one</li>
+                                        <li>This is two</li>
+                                        <li>This is Three</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/span-->
+
+                <div class="col-md-6">
+                    <div class="container">
+                        @RenderBody()
+                    </div>
+                </div><!--/span-->
+
+            </div><!--/row-->
+            <hr>
+            <div class="row">
+                <footer>
+                    <div class="container">
+                        <p class="navbar-text pull-left">&copy; @DateTime.Now.Year - <a href="_blank">MovieRental Online</a></p>
+                        <p class="navbar-text pull-right"><a id="scroll-to-top" style="display:none;" href="#" title="Przewiń na początek strony"><span class="glyphicon glyphicon-arrow-up"></span> </a></p>
+                    </div>
+                </footer>
+            </div>
+            @Scripts.Render("~/bundles/jquery", "~/bundles/bootstrap", "~/bundles/site")
+            @RenderSection("scripts", required: false)
+
+             </div>                 
+</body>
+</html>

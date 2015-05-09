@@ -183,6 +183,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\ModalHelper.cs" />
+    <Compile Include="Migrations\201505081542370_Product.cs" />
+    <Compile Include="Migrations\201505081542370_Product.Designer.cs">
+      <DependentUpon>201505081542370_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\Client.cs" />
@@ -205,6 +209,7 @@
     <Compile Include="ViewModels\RentalIndex.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\adminLayout.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -368,6 +373,7 @@
     <Content Include="Views\Rental\_GenreFilter.cshtml" />
     <Content Include="Views\Rental\_ResoultList.cshtml" />
     <Content Include="Views\Rental\_StorageMediumFilter.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -381,6 +387,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201505081542370_Product.resx">
+      <DependentUpon>201505081542370_Product.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

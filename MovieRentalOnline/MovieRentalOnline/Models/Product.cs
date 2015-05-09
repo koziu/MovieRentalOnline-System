@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -15,7 +17,8 @@ namespace MovieRentalOnline.Models
             this.StorageMediums = new HashSet<StorageMedium>();
 
         }
-        public int ProductId { get; set; } //klucz glowny
+        
+        public int ProductId { get; set; } //klucz glowny       
         public int MovieId { get; set; } //polaczone z jednym filmem
         public float Cost { get; set; }
 
