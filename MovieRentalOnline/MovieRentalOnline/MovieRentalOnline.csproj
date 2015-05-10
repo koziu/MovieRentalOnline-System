@@ -183,14 +183,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\ModalHelper.cs" />
-    <Compile Include="Migrations\201505081542370_Product.cs" />
-    <Compile Include="Migrations\201505081542370_Product.Designer.cs">
-      <DependentUpon>201505081542370_Product.cs</DependentUpon>
-    </Compile>
     <Compile Include="Logic\Cart.cs" />
     <Compile Include="Logic\CartManager.cs" />
     <Compile Include="Logic\ISessionManager.cs" />
     <Compile Include="Logic\SessionManager.cs" />
+    <Compile Include="Migrations\201505052140370_InitialCreate.cs" />
+    <Compile Include="Migrations\201505052140370_InitialCreate.Designer.cs">
+      <DependentUpon>201505052140370_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505091922595_09052015.cs" />
+    <Compile Include="Migrations\201505091922595_09052015.Designer.cs">
+      <DependentUpon>201505091922595_09052015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actor.cs" />
     <Compile Include="Models\Client.cs" />
@@ -213,6 +218,14 @@
     <Compile Include="ViewModels\RentalIndex.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-MovieRentalOnline-20150329034152.mdf" />
+    <Content Include="App_Data\aspnet-MovieRentalOnline-20150329034152_log.ldf">
+      <DependentUpon>aspnet-MovieRentalOnline-20150329034152.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\aspnet-MovieRentalOnline.mdf" />
+    <Content Include="App_Data\aspnet-MovieRentalOnline_log.ldf">
+      <DependentUpon>aspnet-MovieRentalOnline.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\adminLayout.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -380,9 +393,9 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
     <Folder Include="Content\js\" />
+    <Folder Include="obj\Debug\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -392,8 +405,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505081542370_Product.resx">
-      <DependentUpon>201505081542370_Product.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505052140370_InitialCreate.resx">
+      <DependentUpon>201505052140370_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505091922595_09052015.resx">
+      <DependentUpon>201505091922595_09052015.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
