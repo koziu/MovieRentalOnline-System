@@ -19,7 +19,8 @@ namespace MovieRentalOnline.Controllers
         // GET: Products
         public async Task<ActionResult> Index()
         {
-            var products = db.Products.Include(p => p.Movie);
+            var products = db.Products.Include(p => p.Movie).Include(st => st.SoundTechnologys).Include(l => l.Languages).Include(vt => vt.VideoTechnologys).Include(n => n.StorageMediums);
+            
             return View(await products.ToListAsync());
         }
 
@@ -42,6 +43,8 @@ namespace MovieRentalOnline.Controllers
         public ActionResult Create()
         {
             ViewBag.MovieId = new SelectList(db.Movies, "MovieId", "Title");
+            ViewBag.StorageMediumItems = new MultiSelectList(db.StorageMediums, "StorageMediumId", "Name");
+            ViewBag.LanguageId = new SelectList(db.Languages, "LanguageId", "Name");
             return View();
         }
 
@@ -50,7 +53,7 @@ namespace MovieRentalOnline.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ProductId,MovieId,Cost")] Product product)
+        public async Task<ActionResult> Create(Product product)
         {
             if (ModelState.IsValid)
             {
@@ -60,6 +63,7 @@ namespace MovieRentalOnline.Controllers
             }
 
             ViewBag.MovieId = new SelectList(db.Movies, "MovieId", "Title", product.MovieId);
+            ViewBag.StorageMediumItems = new MultiSelectList(db.StorageMediums, "StorageMediumId", "Name", product.StorageMediums);
             return View(product);
         }
 

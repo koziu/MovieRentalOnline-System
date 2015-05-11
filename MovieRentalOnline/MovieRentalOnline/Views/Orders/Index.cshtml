@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Index</h2>
@@ -47,8 +48,8 @@
             @Html.DisplayFor(modelItem => item.ReturnTime)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OrderId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OrderId }) |
+            @** @Html.ActionLink("Edit", "Edit", new { id=item.OrderId }) *@
+            @Html.ActionLink("Details", "Details", new { id=item.OrderId })
             @Html.ActionLink("Delete", "Delete", new { id=item.OrderId })
         </td>
     </tr>
