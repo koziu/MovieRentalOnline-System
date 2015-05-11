@@ -34,5 +34,11 @@ namespace MovieRentalOnline.Controllers
 
             return View();
         }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult AdminPanel()
+        {
+            return View();
+        }
     }
 }

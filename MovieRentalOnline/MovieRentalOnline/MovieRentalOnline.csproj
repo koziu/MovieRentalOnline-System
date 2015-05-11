@@ -416,17 +416,12 @@
     <Content Include="Views\Rental\List.cshtml">
       <SubType>Code</SubType>
     </Content>
-
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-
+    <Content Include="Views\Home\AdminPanel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />
-
-
-    <Folder Include="Content\js\" />
     <Folder Include="obj\Debug\" />
-
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
