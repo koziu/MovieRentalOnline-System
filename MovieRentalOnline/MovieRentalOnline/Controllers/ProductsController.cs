@@ -19,7 +19,7 @@ namespace MovieRentalOnline.Controllers
         // GET: Products
         public async Task<ActionResult> Index()
         {
-            var products = db.Products.Include(p => p.Movie).Include(st => st.SoundTechnologys).Include(l => l.Languages).Include(vt => vt.VideoTechnologys).Include(n => n.StorageMediums);
+            var products = db.Products.Include(p => p.Movie);//.Include(st => st.SoundTechnologys).Include(l => l.Languages).Include(vt => vt.VideoTechnologys).Include(n => n.StorageMediums);
             
             return View(await products.ToListAsync());
         }
@@ -63,7 +63,7 @@ namespace MovieRentalOnline.Controllers
             }
 
             ViewBag.MovieId = new SelectList(db.Movies, "MovieId", "Title", product.MovieId);
-            ViewBag.StorageMediumItems = new MultiSelectList(db.StorageMediums, "StorageMediumId", "Name", product.StorageMediums);
+           // ViewBag.StorageMediumItems = new MultiSelectList(db.StorageMediums, "StorageMediumId", "Name", product.StorageMediums);
             return View(product);
         }
 
