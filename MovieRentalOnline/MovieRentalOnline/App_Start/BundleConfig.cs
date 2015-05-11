@@ -33,6 +33,10 @@ namespace MovieRentalOnline
 
             bundles.Add(new ScriptBundle("~/bundles/modalform").Include(
                         "~/Scripts/modalform.js"));
+            bundles.Add(new ScriptBundle("~/bundles/datetimepicker").Include(
+                        "~/Scripts/moment.js",
+                      "~/Scripts/bootstrap-datetimepicker.min.js"
+                        ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

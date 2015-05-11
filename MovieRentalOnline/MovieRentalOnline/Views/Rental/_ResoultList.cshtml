@@ -7,7 +7,7 @@
 <div id="resoult-section">
     @foreach (var movie in Model)
     {
-        <div class="well">
+        <div class="well" onclick="location.href='@Url.Action("Movie", "Rental", new { id = movie.MovieId})'">
             <div class="row">
                 <div class="col-xs-2">
                     <img alt="@movie.Title" src="/Content/images/movies/@movie.PhotoFileName" style="width:100%">

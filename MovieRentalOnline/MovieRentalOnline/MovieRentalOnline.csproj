@@ -162,6 +162,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActorsController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\DirectorsController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
@@ -205,6 +206,8 @@
     <Compile Include="Models\VideoTechnology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CartItem.cs" />
+    <Compile Include="ViewModels\DateTimeChange.cs" />
     <Compile Include="ViewModels\FilterModel.cs" />
     <Compile Include="ViewModels\RentalIndex.cs" />
   </ItemGroup>
@@ -233,11 +236,27 @@
     <Content Include="Content\images\movies\7.jpeg" />
     <Content Include="Content\images\movies\8.jpg" />
     <Content Include="Content\images\movies\9.jpg" />
+    <Content Include="Content\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\checkbox.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\locales.js" />
+    <Content Include="Content\js\locales.min.js" />
+    <Content Include="Content\js\menu.js" />
+    <Content Include="Content\js\moment-with-locales.js" />
+    <Content Include="Content\js\moment-with-locales.min.js" />
+    <Content Include="Content\js\moment.js" />
+    <Content Include="Content\js\moment.min.js" />
+    <Content Include="Content\js\npm.js" />
+    <Content Include="Content\js\tests.js" />
     <Content Include="Content\my.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap-hover-dropdown.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -258,6 +277,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modalform.js" />
     <Content Include="Scripts\modernizr-2.7.2.js" />
+    <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -331,7 +351,6 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Shared\_GuestLayout.cshtml" />
     <Content Include="Views\Rental\Index.cshtml" />
-    <Content Include="Views\Rental\List.cshtml" />
     <Content Include="Views\Orders\Create.cshtml" />
     <Content Include="Views\Orders\Delete.cshtml" />
     <Content Include="Views\Orders\Details.cshtml" />
@@ -372,11 +391,17 @@
     <Content Include="Views\Rental\_GenreFilter.cshtml" />
     <Content Include="Views\Rental\_ResoultList.cshtml" />
     <Content Include="Views\Rental\_StorageMediumFilter.cshtml" />
+    <Content Include="Views\Rental\Movie.cshtml" />
+    <Content Include="Views\Cart\_AddToCartMenu.cshtml" />
+    <Content Include="Views\Cart\_CartMenu.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Rental\List.cshtml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
-    <Folder Include="Content\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

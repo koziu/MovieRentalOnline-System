@@ -1,0 +1,123 @@
+﻿@model MovieRentalOnline.Logic.Cart
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+
+<div class="row">
+    <div class="col-md-3">
+            @Html.Action("CartMenu", "Cart")
+    </div>
+    <div id="abc" class="col-md-9">
+        <div id="resoult-section">
+            @foreach (var cartItem in Model.CartItems)
+            {
+                <div class="well" onclick="location.href='@Url.Action("Movie", "Rental", new { id = cartItem.Product.Movie.MovieId})'">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <img alt="@cartItem.Product.Movie.Title" src="/Content/images/movies/@cartItem.Product.Movie.PhotoFileName" style="width:100%">
+                        </div>
+                        <div class="col-xs-10">
+                            <h2>@cartItem.Product.Movie.Title<small>(@cartItem.Product.Movie.ReleaseDate.Year)</small></h2>
+                            <p>
+                                @cartItem.Product.Movie.Description
+                            </p>
+                            <p>@cartItem.Product.StorageMedium.Name</p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="/Content/js/jquery.js"></script>
+    <script src="/Content/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/locales.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/moment.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/js/moment-with-locales.min.js"></script>
+    <script src="~/Content/js/bootstrap-datetimepicker.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            updateTime();
+
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        function updateTime() {
+            $('#datetimepicker2').datetimepicker(
+                    {
+                        locale: 'pl'
+                    });
+            $('#datetimepicker1').datetimepicker(
+                    {
+
+                        locale: 'pl'
+                    });
+
+        }
+    </script>
+    <script type="text/javascript">
+        function changeTime() {
+
+            var Deliver = moment($('#datetimepicker1').data("DateTimePicker").date());
+            var Return = moment($('#datetimepicker2').data("DateTimePicker").date());
+
+            var DeliveryTime = {
+                Year: Deliver.year(),
+                Month: Deliver.month() + 1,
+                Day: Deliver.date(),
+                Hour: Deliver.hour(),
+                Minute: Deliver.minute()
+            };
+
+            var ReturnTime = {
+                Year: Return.year(),
+                Month: Return.month() + 1,
+                Day: Return.date(),
+                Hour: Return.hour(),
+                Minute: Return.minute()
+            };
+
+            var DateTimeChange = {
+                DeliveryTime: DeliveryTime,
+                ReturnTime: ReturnTime
+            }
+
+
+            var DateTimeChange = JSON.stringify({ 'DateTimeChange': DateTimeChange })
+
+            var $form = $(this);
+
+            var settings = {
+                data: DateTimeChange,
+                url: "Cart",
+                contentType: "application/json; charset=utf-8",
+                // dataType: "json",
+                type: "POST"
+            };
+
+            $.ajax(settings).success(function (result) {
+                var $targetElement = "#cartMenu";
+                var $newContent = $(result);
+                $($targetElement).replaceWith($newContent);
+                $newContent.effect("slide");
+                updateTime();
+            });
+
+            return false;
+
+
+        };
+    </script>
+}

@@ -116,5 +116,17 @@ namespace MovieRentalOnline.Controllers
 
             return Json(actors, JsonRequestBehavior.AllowGet);
         }
+
+
+        public ActionResult Movie(int id = -1)
+        {
+            var movie = db.Movies.Where(a => a.MovieId == id).FirstOrDefault();
+            if (movie == null)
+                return RedirectToAction("List");
+            else
+                return View(movie);
+        }
+
+        
     }
 }

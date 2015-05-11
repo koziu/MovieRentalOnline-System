@@ -1,0 +1,157 @@
+﻿@model MovieRentalOnline.Models.Movie
+@{
+    ViewBag.Title = Model.Title;
+}
+
+
+    <div class="row">
+        <div class="col-md-3">
+            @Html.Action("CartMenu", "Cart")
+            <div id="AddToCartMenu">
+                @Html.Action("AddToCartMenu", "Cart", Model)
+            </div>
+        </div>
+
+
+        <div class="col-md-9">
+            <div class="well">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img alt="@Model.Title" src="~/Content/images/movies/@Model.PhotoFileName" style="width:100%">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="well">
+                            <h2>@Model.Title<small>(@Model.ReleaseDate.Year)</small></h2>
+                            <p>
+                                @Model.Description
+                            </p>
+                            <div class="well">
+                                <h3>Gatunek::</h3>
+                                <ul class="list-group">
+                                    @foreach (var genre in Model.Genres)
+                                    {
+                                        <li class="list-group-item">@genre.GenreName</li>
+                                    }
+                                </ul>
+                            </div>
+
+                            <div class="well">
+                                <h3>Aktorzy:</h3>
+                                <ul class="list-group">
+                                    @foreach (var actor in Model.Actors)
+                                    {
+                                        <li class="list-group-item">@actor.FirstName @actor.LastName</li>
+                                    }
+                                </ul>
+                            </div>
+
+                            <div class="well">
+                                <h3>Reżyseria:</h3>
+                                <ul class="list-group">
+                                    @foreach (var director in Model.Directors)
+                                    {
+                                        <li class="list-group-item">@director.FirstName @director.LastName</li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    @section scripts
+    {
+
+        @Scripts.Render("~/bundles/datetimepicker")
+
+        <script src="/Content/js/jquery.js"></script>
+<script src="/Content/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="~/Content/js/locales.min.js"></script>
+<script type="text/javascript" src="~/Content/js/moment.min.js"></script>
+
+<script type="text/javascript" src="~/Content/js/moment-with-locales.min.js"></script>
+<script src="~/Content/js/bootstrap-datetimepicker.min.js"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+        updateTime();
+
+    });
+
+</script>
+
+<script type="text/javascript">
+    function updateTime() {
+        $('#datetimepicker2').datetimepicker(
+                {
+                    locale: 'pl'
+                });
+        $('#datetimepicker1').datetimepicker(
+                {
+
+                    locale: 'pl'
+                });
+
+    }
+</script>
+<script type="text/javascript">
+    function changeTime() {
+
+        var Deliver = moment($('#datetimepicker1').data("DateTimePicker").date());
+        var Return = moment($('#datetimepicker2').data("DateTimePicker").date());
+
+        var DeliveryTime = {
+            Year: Deliver.year(),
+            Month: Deliver.month() + 1,
+            Day: Deliver.date(),
+            Hour: Deliver.hour(),
+            Minute: Deliver.minute()
+        };
+
+        var ReturnTime = {
+            Year: Return.year(),
+            Month: Return.month() + 1,
+            Day: Return.date(),
+            Hour: Return.hour(),
+            Minute: Return.minute()
+        };
+
+        var DateTimeChange = {
+            DeliveryTime: DeliveryTime,
+            ReturnTime: ReturnTime
+        }
+
+
+        var DateTimeChange = JSON.stringify({ 'DateTimeChange': DateTimeChange })
+
+        var $form = $(this);
+
+        var settings = {
+            data: DateTimeChange,
+            url: '@Url.Action("Index", "Cart")',
+            contentType: "application/json; charset=utf-8",
+            // dataType: "json",
+            type: "POST"
+        };
+
+        $.ajax(settings).success(function (result) {
+            var $targetElement = "#cartMenu";
+            var $newContent = $(result);
+            $($targetElement).replaceWith($newContent);
+            $newContent.effect("slide");
+            updateTime();
+            $("#AddToCartMenu").load('@Url.Action("AddToCartMenu", "Cart")' + '?movieId=@Model.MovieId');
+        });
+
+        return false;
+
+
+    };
+</script>
+
+    }
