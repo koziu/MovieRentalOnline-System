@@ -52,6 +52,7 @@ namespace MovieRentalOnline.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Movies.Add(movie);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
