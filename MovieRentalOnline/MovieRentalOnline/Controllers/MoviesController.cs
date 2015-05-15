@@ -15,6 +15,7 @@ namespace MovieRentalOnline.Controllers
     public class MoviesController : Controller
     {
         private RentalContext db = new RentalContext();
+       
 
         // GET: Movies
         public async Task<ActionResult> Index()

@@ -218,13 +218,10 @@
     <Compile Include="ViewModels\CartItem.cs" />
     <Compile Include="ViewModels\DateTimeChange.cs" />
     <Compile Include="ViewModels\FilterModel.cs" />
+    <Compile Include="ViewModels\MovieSoundTechnology.cs" />
     <Compile Include="ViewModels\RentalIndex.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-MovieRentalOnline-20150329034152.mdf" />
-    <Content Include="App_Data\aspnet-MovieRentalOnline-20150329034152_log.ldf">
-      <DependentUpon>aspnet-MovieRentalOnline-20150329034152.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\aspnet-MovieRentalOnline.mdf" />
     <Content Include="App_Data\aspnet-MovieRentalOnline_log.ldf">
       <DependentUpon>aspnet-MovieRentalOnline.mdf</DependentUpon>

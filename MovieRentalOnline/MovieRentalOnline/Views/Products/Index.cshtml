@@ -19,7 +19,8 @@
             @Html.DisplayNameFor(model => model.Cost)
         </th> 
         <th>
-            @Html.DisplayNameFor(model => model.StorageMediums)
+           @Html.DisplayNameFor(model => model.StorageMedium.Name) 
+           
         </th>        
         <th></th>
     </tr>
@@ -33,10 +34,7 @@
             @Html.DisplayFor(modelItem => item.Cost)
         </td>
         <td>            
-                @foreach (var st in item.StorageMediums)
-                {
-                   @:(@Html.DisplayFor(model => st.Name))
-                }             
+            @Html.DisplayFor(modelItem => item.StorageMedium.Name)           
 </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |

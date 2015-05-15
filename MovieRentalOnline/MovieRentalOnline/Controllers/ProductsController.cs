@@ -12,8 +12,9 @@ using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
 {
-    public class ProductsController : Controller
+    public class ProductsController : Controller     
     {
+        private Product product;
         private RentalContext db = new RentalContext();
 
         // GET: Products
@@ -43,8 +44,9 @@ namespace MovieRentalOnline.Controllers
         public ActionResult Create()
         {
             ViewBag.MovieId = new SelectList(db.Movies, "MovieId", "Title");
-            ViewBag.StorageMediumItems = new MultiSelectList(db.StorageMediums, "StorageMediumId", "Name");
-            ViewBag.LanguageId = new SelectList(db.Languages, "LanguageId", "Name");
+            ViewBag.StorageMediumId = new SelectList(db.StorageMediums, "StorageMediumId", "Name");
+            ViewData["SoundTechnologys"] = db.SoundTechnologys.ToList();
+            ViewBag.LanguageId = new MultiSelectList(db.Languages, "LanguageId", "Name");
             return View();
         }
 
@@ -55,6 +57,8 @@ namespace MovieRentalOnline.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Product product)
         {
+            var videoTechnologys = Request.Form["LanguageId"];
+                    
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
@@ -63,7 +67,7 @@ namespace MovieRentalOnline.Controllers
             }
 
             ViewBag.MovieId = new SelectList(db.Movies, "MovieId", "Title", product.MovieId);
-           // ViewBag.StorageMediumItems = new MultiSelectList(db.StorageMediums, "StorageMediumId", "Name", product.StorageMediums);
+            ViewBag.StorageMediumId = new SelectList(db.StorageMediums, "StorageMediumId", "Name", product.StorageMediumId);
             return View(product);
         }
 
