@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.DAL
@@ -12,6 +14,32 @@ namespace MovieRentalOnline.DAL
         protected override void Seed(RentalContext context)
         {
             SeedRentalData(context);
+
+            var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            string password = "P@ssw0rd";
+
+            if (!RoleManager.RoleExists("Administrator"))
+            {
+                var roleresult = RoleManager.Create(new IdentityRole("Admin"));
+            }
+            if (!RoleManager.RoleExists("Worker"))
+            {
+                var roleresult = RoleManager.Create(new IdentityRole("Worker"));
+            }
+            if (!RoleManager.RoleExists("User"))
+            {
+                var roleresult = RoleManager.Create(new IdentityRole("User"));
+            }
+
+            var user = new ApplicationUser(){Email = "admin@admin.pl"};
+            var createResult = UserManager.Create(user, password);
+
+            if (createResult.Succeeded)
+            {
+                var result = UserManager.AddToRole(user.Id, "Admin");
+            }
+
             base.Seed(context);
         }
 
