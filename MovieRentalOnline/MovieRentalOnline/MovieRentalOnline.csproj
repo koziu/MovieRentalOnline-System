@@ -424,10 +424,11 @@
     </Content>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Home\AdminPanel.cshtml" />
+    <Content Include="Views\Manage\ChangeEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />
-    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -176,9 +176,6 @@ namespace MovieRentalOnline.Controllers
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     // Add role to new user
-                    var context = new ApplicationDbContext();
-                    var roleStore = new RoleStore<IdentityRole>(context);
-                    var roleManager = new RoleManager<IdentityRole>(roleStore);
                     UserManager.AddToRole(user.Id, "Client");
 
                     return RedirectToAction("Index", "Home");

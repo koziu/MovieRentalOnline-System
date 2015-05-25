@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -63,14 +64,21 @@ namespace MovieRentalOnline.Controllers
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
 
+            
+            //var address = new UserAddress();
             var userId = User.Identity.GetUserId();
+            var address = db.UserAddress.where(x => x.userId == User > identity.getID);
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
+                Email = await UserManager.GetEmailAsync(userId),
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
-                TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
-                Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                Street  = address.Street,
+                HomeNumber = address.HomeNo,
+                PostalCode = address.Postal,
+                PostalCity = address.CityPostal,
+                City = address.City,
+                Country = address.Country
             };
             return View(model);
         }
@@ -116,18 +124,20 @@ namespace MovieRentalOnline.Controllers
             {
                 return View(model);
             }
-            // Generate the token and send it
-            var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), model.Number);
-            if (UserManager.SmsService != null)
+
+            var result = await UserManager.SetPhoneNumberAsync(User.Identity.GetUserId(), model.Number);
+            if (result.Succeeded)
             {
-                var message = new IdentityMessage
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
                 {
-                    Destination = model.Number,
-                    Body = "Your security code is: " + code
-                };
-                await UserManager.SmsService.SendAsync(message);
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                return RedirectToAction("Index", new { Message = ManageMessageId.AddPhoneSuccess });
             }
-            return RedirectToAction("VerifyPhoneNumber", new { PhoneNumber = model.Number });
+            // If we got this far, something failed, redisplay form
+            ModelState.AddModelError("", "Failed to verify phone");
+            return View(model);
         }
 
         //
@@ -179,7 +189,8 @@ namespace MovieRentalOnline.Controllers
             {
                 return View(model);
             }
-            var result = await UserManager.ChangePhoneNumberAsync(User.Identity.GetUserId(), model.PhoneNumber, model.Code);
+            //var result = await UserManager.ChangePhoneNumberAsync(User.Identity.GetUserId(), model.PhoneNumber, model.Code);
+            var result = await UserManager.SetPhoneNumberAsync(User.Identity.GetUserId(), model.PhoneNumber);
             if (result.Succeeded)
             {
                 var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
@@ -242,6 +253,37 @@ namespace MovieRentalOnline.Controllers
             return View(model);
         }
 
+        public ActionResult ChangeEmail()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Manage/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangeEmail(ChangeEmailViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            
+            //var login = await UserManager.AddLoginAsync(User.Identity.GetUserId(), model.NewLogin);
+            var result = await UserManager.SetEmailAsync(User.Identity.GetUserId(), model.NewEmail);
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                return RedirectToAction("Index", new { Message = ManageMessageId.ChangeEmailSucces });
+            }
+            AddErrors(result);
+            return View(model);
+        }
+
         //
         // GET: /Manage/SetPassword
         public ActionResult SetPassword()
@@ -296,6 +338,8 @@ namespace MovieRentalOnline.Controllers
                 OtherLogins = otherLogins
             });
         }
+
+
 
         //
         // POST: /Manage/LinkLogin
@@ -373,6 +417,7 @@ namespace MovieRentalOnline.Controllers
 
         public enum ManageMessageId
         {
+            ChangeEmailSucces,
             AddPhoneSuccess,
             ChangePasswordSuccess,
             SetTwoFactorSuccess,
