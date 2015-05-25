@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -6,6 +7,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MovieRentalOnline.DAL;
 using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
@@ -68,9 +70,6 @@ namespace MovieRentalOnline.Controllers
             {
                 HasPassword = HasPassword(),
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
-                TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
-                Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
             return View(model);
         }
@@ -305,6 +304,18 @@ namespace MovieRentalOnline.Controllers
         {
             // Request a redirect to the external login provider to link a login for the current user
             return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult UpdateAddress(UserAddress model)
+        {
+            if (ModelState.IsValid)
+            {
+                RentalContext db = new RentalContext();
+                db.Entry(model).State = EntityState.Modified;
+                db.SaveChangesAsync();
+             }
+            return RedirectToAction("Index", new IndexViewModel());
         }
 
         //

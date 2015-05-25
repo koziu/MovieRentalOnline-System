@@ -1,342 +1,58 @@
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll.config
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.pdb
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Owin.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\WebGrease.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.pdb
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
-C:\Users\Mateusz\Documents\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll.config
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.pdb
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Web.Infrastructure.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Owin.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\WebGrease.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
-D:\VisualStudio\Nowy folder\git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll.config
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.pdb
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Web.Infrastructure.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Owin.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\WebGrease.dll
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.InitialCreate.resources
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations._09052015.resources
-C:\git\aga\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csproj.GenerateResource.Cache
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll.config
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.pdb
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Web.Infrastructure.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Owin.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\WebGrease.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.pdb
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.InitialCreate.resources
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations._09052015.resources
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csproj.GenerateResource.Cache
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll.config
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.pdb
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Web.Infrastructure.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Owin.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\WebGrease.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.InitialCreate.resources
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations._09052015.resources
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csproj.GenerateResource.Cache
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
-C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
-<<<<<<< HEAD
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll.config
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.pdb
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Web.Infrastructure.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Owin.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\WebGrease.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.InitialCreate.resources
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csproj.GenerateResource.Cache
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.address.resources
-C:\Programowanie\MovieRental\.git\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.adres2.resources
-=======
-E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
->>>>>>> 668bbdf1425d820121a1c275c3ca453b40002e64
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll.config
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\MovieRentalOnline.pdb
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Antlr3.Runtime.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Owin.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\WebGrease.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\EntityFramework.SqlServer.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Helpers.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Mvc.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Optimization.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.Razor.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\System.Web.WebPages.Razor.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Newtonsoft.Json.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Google.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.InitialCreate.resources
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.address.resources
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.adres2.resources
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csproj.GenerateResource.Cache
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.adres4.resources

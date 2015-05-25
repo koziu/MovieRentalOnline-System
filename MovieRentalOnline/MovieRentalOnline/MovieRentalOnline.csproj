@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201505251157035_adres2.Designer.cs">
       <DependentUpon>201505251157035_adres2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505251526397_adres4.cs" />
+    <Compile Include="Migrations\201505251526397_adres4.Designer.cs">
+      <DependentUpon>201505251526397_adres4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actor.cs" />
@@ -331,7 +335,6 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
@@ -425,7 +428,12 @@
     </Content>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Home\AdminPanel.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Manage\ChangeEmail.cshtml" />
+=======
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Manage\_AddressPartial.cshtml" />
+>>>>>>> 902dff788950dc3d980a23ea170a2f9ee2977474
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />
@@ -447,6 +455,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505251157035_adres2.resx">
       <DependentUpon>201505251157035_adres2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505251526397_adres4.resx">
+      <DependentUpon>201505251526397_adres4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
