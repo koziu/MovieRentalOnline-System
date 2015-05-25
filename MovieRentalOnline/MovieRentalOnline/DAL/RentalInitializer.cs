@@ -19,7 +19,7 @@ namespace MovieRentalOnline.DAL
             var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             string password = "P@ssw0rd";
 
-            if (!RoleManager.RoleExists("Administrator"))
+            if (!RoleManager.RoleExists("Admin"))
             {
                 var roleresult = RoleManager.Create(new IdentityRole("Admin"));
             }
