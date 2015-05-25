@@ -68,6 +68,28 @@ namespace MovieRentalOnline.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        [Required]
+        [Display(Name = "Street")]
+        public string Street { get; set; }
+        [Required]
+        [Display(Name = "Home number")]
+        public string HomeNo { get; set; }
+        [Required]
+        [Display(Name = "Postal code")]
+        public string Postal { get; set; }
+        [Required]
+        [Display(Name = "City Postal")]
+        public string CityPostal { get; set; }
+        [Required]
+        [Display(Name = "City")]
+        public string City { get; set; }
+        [Required]
+        [Display(Name = "Country")]
+        public string Country { get; set; }
+        [Required]
+        [Display(Name = "Mobile Phone")]
+        public string Phone { get; set; }
+        public bool IsPrimary { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

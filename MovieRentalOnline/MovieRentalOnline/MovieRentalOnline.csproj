@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201505251157035_adres2.Designer.cs">
       <DependentUpon>201505251157035_adres2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505251526397_adres4.cs" />
+    <Compile Include="Migrations\201505251526397_adres4.Designer.cs">
+      <DependentUpon>201505251526397_adres4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actor.cs" />
@@ -330,7 +334,6 @@
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
@@ -424,10 +427,12 @@
     </Content>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Home\AdminPanel.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Manage\_AddressPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />
-    <Folder Include="obj\Debug\" />
+    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -445,6 +450,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505251157035_adres2.resx">
       <DependentUpon>201505251157035_adres2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505251526397_adres4.resx">
+      <DependentUpon>201505251526397_adres4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
