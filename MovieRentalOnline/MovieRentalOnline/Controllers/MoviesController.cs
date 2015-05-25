@@ -9,9 +9,11 @@ using System.Web;
 using System.Web.Mvc;
 using MovieRentalOnline.DAL;
 using MovieRentalOnline.Models;
+using MovieRentalOnline.ViewModels;
 
 namespace MovieRentalOnline.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class MoviesController : Controller
     {
         private RentalContext db = new RentalContext();
@@ -41,6 +43,13 @@ namespace MovieRentalOnline.Controllers
         // GET: Movies/Create
         public ActionResult Create()
         {
+            //EditMovie editMovie = new EditMovie();
+            ViewBag.ActorId =
+                new SelectList(db.Actors, "Id", "Name", "Surname");
+            ViewBag.DirectorId =
+                new SelectList(db.Directors, "Id", "Name", "Surname");
+            ViewBag.GenreId =
+                new SelectList(db.Genres, "Id", "GenreName");
             return View();
         }
 
@@ -49,12 +58,12 @@ namespace MovieRentalOnline.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "MovieId,Title,Description,ReleaseDate,PhotoFileName")] Movie movie)
+        public async Task<ActionResult> Create([Bind(Include = "MovieId,Title,Description,ReleaseDate,PhotoFileName")] EditMovie movie)
         {
             if (ModelState.IsValid)
             {
 
-                db.Movies.Add(movie);
+                db.Movies.Add(movie.movie);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

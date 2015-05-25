@@ -1,4 +1,4 @@
-﻿@model MovieRentalOnline.Models.Movie
+﻿@model MovieRentalOnline.ViewModels.EditMovie
 
 @{
     ViewBag.Title = "Create";
@@ -7,10 +7,10 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Movie</h4>
         <hr />
@@ -43,6 +43,13 @@
             @Html.LabelFor(model => model.PhotoFileName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PhotoFileName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PhotoFileName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PhotoFileName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList(model => model., new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.PhotoFileName, "", new { @class = "text-danger" })
             </div>
         </div>

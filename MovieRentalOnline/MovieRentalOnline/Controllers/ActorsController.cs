@@ -12,6 +12,7 @@ using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ActorsController : Controller
     {
         private RentalContext db = new RentalContext();
@@ -94,6 +95,7 @@ namespace MovieRentalOnline.Controllers
         }
 
         // GET: Actors/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -109,6 +111,7 @@ namespace MovieRentalOnline.Controllers
         }
 
         // POST: Actors/Delete/5
+       
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)

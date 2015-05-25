@@ -220,6 +220,7 @@
     <Compile Include="ViewModels\DateTimeChange.cs" />
     <Compile Include="ViewModels\FilterModel.cs" />
     <Compile Include="ViewModels\MovieSoundTechnology.cs" />
+    <Compile Include="ViewModels\EditMovie.cs" />
     <Compile Include="ViewModels\RentalIndex.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,6 +12,7 @@ using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ProductsController : Controller     
     {
         private Product product;
