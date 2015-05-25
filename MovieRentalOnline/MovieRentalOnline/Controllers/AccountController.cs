@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MovieRentalOnline.DAL;
 using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
@@ -157,6 +158,21 @@ namespace MovieRentalOnline.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    RentalContext db = new RentalContext();
+                    var userAdresPrimary = new UserAddress()
+                    {
+                        IsPrimary = true,
+                        UserId = User.Identity.GetUserId()
+                    };
+                    var userAdresSecondary = new UserAddress()
+                    {
+                        IsPrimary = false,
+                        UserId = User.Identity.GetUserId()
+                    };
+                    db.UserAddresses.Add(userAdresPrimary);
+                    db.UserAddresses.Add(userAdresSecondary);
+                    await db.SaveChangesAsync();
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     // Add role to new user

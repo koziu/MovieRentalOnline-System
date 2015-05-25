@@ -193,9 +193,13 @@
     <Compile Include="Migrations\201505052140370_InitialCreate.Designer.cs">
       <DependentUpon>201505052140370_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505091922595_09052015.cs" />
-    <Compile Include="Migrations\201505091922595_09052015.Designer.cs">
-      <DependentUpon>201505091922595_09052015.cs</DependentUpon>
+    <Compile Include="Migrations\201505251144193_address.cs" />
+    <Compile Include="Migrations\201505251144193_address.Designer.cs">
+      <DependentUpon>201505251144193_address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505251157035_adres2.cs" />
+    <Compile Include="Migrations\201505251157035_adres2.Designer.cs">
+      <DependentUpon>201505251157035_adres2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -213,6 +217,7 @@
     <Compile Include="Models\Rent.cs" />
     <Compile Include="Models\SoundTechnology.cs" />
     <Compile Include="Models\StorageMedium.cs" />
+    <Compile Include="Models\UserAddress.cs" />
     <Compile Include="Models\VideoTechnology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -435,8 +440,11 @@
     <EmbeddedResource Include="Migrations\201505052140370_InitialCreate.resx">
       <DependentUpon>201505052140370_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201505091922595_09052015.resx">
-      <DependentUpon>201505091922595_09052015.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505251144193_address.resx">
+      <DependentUpon>201505251144193_address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505251157035_adres2.resx">
+      <DependentUpon>201505251157035_adres2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

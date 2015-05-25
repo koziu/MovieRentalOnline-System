@@ -35,5 +35,6 @@ namespace MovieRentalOnline.DAL
         public DbSet<SoundTechnology> SoundTechnologys {get; set;}
         public DbSet<StorageMedium> StorageMediums {get; set;}
         public DbSet<VideoTechnology> VideoTechnologys {get; set;}
+        public DbSet<UserAddress> UserAddresses { get; set; }
     }
 }
