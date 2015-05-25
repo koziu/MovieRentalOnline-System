@@ -278,3 +278,4 @@ C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\Movie
 C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csproj.GenerateResource.Cache
 C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
 C:\Programowanie\movieRental\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
+E:\MovieRentalOnline-System\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache

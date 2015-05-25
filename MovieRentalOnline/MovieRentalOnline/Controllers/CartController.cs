@@ -10,11 +10,8 @@ using System.Web.Mvc;
 
 namespace MovieRentalOnline.Controllers
 {
-
-
     public class CartController : Controller
     {
-
         // GET: Cart
         private ISessionManager sessionManager { get; set; }
         private CartManager cartManager;
@@ -25,6 +22,8 @@ namespace MovieRentalOnline.Controllers
             this.sessionManager = new SessionManager();
             this.cartManager = new CartManager(this.sessionManager, this.db);
         }
+
+        [Authorize(Roles = "Client")]
         public ActionResult Index(DateTimeChange DateTimeChange = null)
         {
             if (Request.IsAjaxRequest())
@@ -52,13 +51,12 @@ namespace MovieRentalOnline.Controllers
                 cartManager.AddToCart(product);
             return RedirectToAction("Index", "Cart");
         }
+
         public ActionResult RemoveFromCart(int productId)
         {
             cartManager.RemoveFromCart(productId);
             return RedirectToAction("Index", "Cart");
         }
-
-
         
         public ActionResult AddToCartMenu(int  movieId = 0)
         {
