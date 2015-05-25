@@ -56,3 +56,4 @@ C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRenta
 C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.dll
 C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.pdb
 C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.Migrations.adres4.resources
+C:\Programowanie\Movies\MovieRentalOnline\MovieRentalOnline\obj\Debug\MovieRentalOnline.csprojResolveAssemblyReference.cache
