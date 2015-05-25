@@ -428,12 +428,18 @@
     </Content>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Home\AdminPanel.cshtml" />
+<<<<<<< HEAD
 
     <Content Include="Views\Manage\ChangeEmail.cshtml" />
 
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Manage\_AddressPartial.cshtml" />
 
+=======
+    <Content Include="Views\Manage\ChangeEmail.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Manage\_AddressPartial.cshtml" />
+>>>>>>> 07044183fd8bb83cc85b744d4d83a8c98789e6b4
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />
