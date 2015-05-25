@@ -8,16 +8,10 @@ namespace MovieRentalOnline.Models
     public class IndexViewModel
     {
         public bool HasPassword { get; set; }
-        public string Email { get; set; }
+        public IList<UserLoginInfo> Logins { get; set; }
         public string PhoneNumber { get; set; }
-
-        public bool IsPrimary { get; set; }
-        public string Street { get; set; }
-        public string HomeNumber { get; set; }
-        public string PostalCode { get; set; }
-        public string PostalCity { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
+        public bool TwoFactor { get; set; }
+        public bool BrowserRemembered { get; set; }
     }
 
     public class ManageLoginsViewModel
@@ -62,25 +56,6 @@ namespace MovieRentalOnline.Models
         [Display(Name = "Confirm new password")]
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-    }
-
-    public class ChangeEmailViewModel
-    {
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "Current email")]
-        public string OldEmail{ get; set; }
-
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "New Email")]
-        public string NewEmail { get; set; }
-        public string NewLogin { get; set; }
-
-        [DataType(DataType.EmailAddress)]
-        [Display(Name = "Confirm new email")]
-        [Compare("NewEmail", ErrorMessage = "The new email and confirmation email do not match.")]
-        public string ConfirmEmail { get; set; }
     }
 
     public class AddPhoneNumberViewModel
