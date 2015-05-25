@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using MovieRentalOnline.CustomAtributes;
 using MovieRentalOnline.DAL;
-using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
 {
@@ -22,6 +18,7 @@ namespace MovieRentalOnline.Controllers
 
             return View(db.Movies.ToList());
         }
+
         [AdjustLayout]
         public ActionResult About()
         {
@@ -29,6 +26,7 @@ namespace MovieRentalOnline.Controllers
 
             return View();
         }
+
         [AdjustLayout]
         public ActionResult Contact()
         {

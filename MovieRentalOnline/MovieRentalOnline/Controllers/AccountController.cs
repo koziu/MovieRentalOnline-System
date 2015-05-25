@@ -5,7 +5,9 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MovieRentalOnline.DAL;
@@ -172,8 +174,12 @@ namespace MovieRentalOnline.Controllers
                     await db.SaveChangesAsync();
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    
+
+                    // Add role to new user
+                    var context = new ApplicationDbContext();
+                    var roleStore = new RoleStore<IdentityRole>(context);
+                    var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    UserManager.AddToRole(user.Id, "Client");
 
                     return RedirectToAction("Index", "Home");
                 }
