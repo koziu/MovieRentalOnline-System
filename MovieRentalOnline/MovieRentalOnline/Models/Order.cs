@@ -9,7 +9,7 @@ namespace MovieRentalOnline.Models
     {
         public Order() { }
         public int OrderId { get; set; } //klucz glowny
-        public int ClientId { get; set; }    // polaczone z jednym klientem
+        public string ClientId { get; set; }    // polaczone z jednym klientem
         public int AdditionalInformation { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public DateTime DeliveryTime { get; set; }
@@ -22,8 +22,8 @@ namespace MovieRentalOnline.Models
     {
         Sent,
         Delivered,
-        CourierSent,
         Returned,
-        Canceled
+        Canceled,
+        InProgress
     }
 }

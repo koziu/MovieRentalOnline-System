@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace MovieRentalOnline.Controllers
 {
@@ -90,10 +91,31 @@ namespace MovieRentalOnline.Controllers
         public ActionResult Order()
         {
             Cart cart = cartManager.GetCart();
-           // User.Identity
-
+            var order = new Order()
+            {
+                ClientId = User.Identity.GetUserId(),
+                DeliveryTime = cart.DeliveryTime,
+                ReturnTime = cart.ReturnTime,
+                OrderStatus = OrderStatus.InProgress,
+                Rents = new List<Rent>()
+               
+            };
+            foreach (var rent in cart.CartItems)
+            {
+                var r = new Rent()
+                {
+                    PhysicalProduct = db.PhysicalProducts.Find(cartManager.AvailabilePhysicalProductId(rent.Product, cart.DeliveryTime, cart.ReturnTime)),
+                    Order = order,
+                    SingleCost = (double)rent.Cost,
+                    RentStatus = RentStatus.Waiting
+                };
+                order.Rents.Add(r);
+            }
+            db.Orders.Add(order);
+            db.SaveChanges();
             
-            return View("_CartMenu", cart);
+            
+            return View("_SuccesOrder", order);
         }
         
     }
