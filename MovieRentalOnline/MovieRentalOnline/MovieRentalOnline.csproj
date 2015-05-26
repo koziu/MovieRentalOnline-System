@@ -247,6 +247,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap-datetimepicker.css" />
+    <Content Include="Content\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\half-slider.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\my.css" />
     <Content Include="Content\half-slider.css" />
     <Content Include="Content\images\actors\1.jpg" />
     <Content Include="Content\images\actors\2.jpg" />
@@ -296,6 +305,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\repositories.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -441,9 +452,9 @@
     <Content Include="Views\Cart\_SuccesOrder.cshtml" />
     <Content Include="Views\Manage\Orders.cshtml" />
     <Content Include="Views\Manage\ManageOrders.cshtml" />
+    <Content Include="Views\Rental\_TitleFilter.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\css\" />
     <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>

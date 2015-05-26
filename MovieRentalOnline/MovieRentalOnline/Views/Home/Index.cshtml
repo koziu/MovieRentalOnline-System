@@ -1,43 +1,73 @@
 ﻿@model IEnumerable<MovieRentalOnline.Models.Movie>
 @{
     ViewBag.Title = "Home Page";
-}
-<div>
-    <a class="left carousel-control" href="#carousel-example-generic2" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic2" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
+}  
+          
+     <div class="container-fluid">
+        <br />
+        <div id="myCarousel" class="carousel slide">
+            <!-- Wrapper for Slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="fill">
+                        <div class="myCover">
+                            <div class="myTitle"><p>Pierwszy film</p></div>
+                            <img alt="Interstellar" src="http://1.fwcdn.pl/po/56/29/375629/7670122.6.jpg">
 
-</div>
-<div class="jumbotron">
-    <h1>ASP.NET 2</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+                        </div>
+                        <div class="myCover">
+                            <div class="myTitle"><p>Drugi film</p></div>
+                            <img alt="Interstellar" src="http://1.fwcdn.pl/po/64/19/686419/7657178.6.jpg">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+                        </div>
+                        <div class="myCover">
+                            <div class="myTitle"><p>trzeci film</p></div>
+                            <img alt="Interstellar" src="http://1.fwcdn.pl/po/49/58/694958/7674891.6.jpg">
+
+                        </div>
+                        <div class="myCover">
+                            <div class="myTitle"><p>czwarty film</p></div>
+                            <img alt="Interstellar" src="http://1.fwcdn.pl/po/60/40/656040/7666910.6.jpg">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="fill">
+                        <div class="myCover">
+                            <div class="myTitle"><p>film z bardzo dlugim tytulem</p></div>
+                            <img alt="Interstellar" src="http://1.fwcdn.pl/po/85/65/558565/7372261.6.jpg">
+
+                        </div>
+                        <div class="myCover">
+                            <div class="myTitle"><p>film z bardzo bardzo bardzo bardzo dlugaaaasnym tytulemmmm</p></div>
+                            <img alt="Interstellar" src="http://1.fwcdn.pl/po/18/62/691862/7667694.6.jpg">
+
+                        </div>
+                        <div class="myCover">
+                            <div class="myTitle"><p>adsad2</p></div>
+                            <img alt="Interstellar" src="http://1.fwcdn.pl/po/21/89/612189/7673495.6.jpg">
+
+                        </div>
+                        <div class="myCover">
+                            <div class="myTitle"><p>adsad2</p></div>
+                            <a href="bbb">
+                                <img alt="Interstellar" src="http://1.fwcdn.pl/po/18/62/691862/7667694.6.jpg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
+        </div>
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/modalform")

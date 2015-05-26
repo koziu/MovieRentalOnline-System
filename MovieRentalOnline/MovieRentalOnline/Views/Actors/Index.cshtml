@@ -27,13 +27,43 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Biography)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.PhotoFileName)
         </th>
         <th></th>
     </tr>
 
+<<<<<<< HEAD
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Biography)                            
+                </td>
+                <td>                      
+                    @Html.DisplayFor(modelItem => item.PhotoFileName)
+                        
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ActorId })
+                    @Html.ActionLink("Details", "Details", new { id = item.ActorId })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ActorId })
+                </td>
+            </tr>
+        }
+=======
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -61,5 +91,6 @@
         </td>
     </tr>
 }
+>>>>>>> 6d3c378c354244cf3552b86086839f823abb18ac
 
 </table>
