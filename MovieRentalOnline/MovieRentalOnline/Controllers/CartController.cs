@@ -86,6 +86,15 @@ namespace MovieRentalOnline.Controllers
             Cart cart = cartManager.GetCart();
             return View("_CartMenu", cart);
         }
+       
+        public ActionResult Order()
+        {
+            Cart cart = cartManager.GetCart();
+           // User.Identity
+
+            
+            return View("_CartMenu", cart);
+        }
         
     }
 }

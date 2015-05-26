@@ -28,7 +28,7 @@
                             foreach (var cartItem in Model.CartItems)
                             {
                                 <tr>
-                                    <td><small @{if (cartItem.IsAvailable == false) { <text> style="color:red" </text>  } }>@cartItem.Product.Movie.Title</small></td>
+                                    <td><small @{if (cartItem.IsAvailable == false) { <text> style="color:red" </text>     } }>@cartItem.Product.Movie.Title</small></td>
                                     <td><small>@cartItem.Product.StorageMedium.Name</small></td>
                                     <td><small>@cartItem.Cost zł</small></td>
                                     <td>
@@ -61,7 +61,10 @@
             <div class="form-group">
                 <p>Łączny koszt: @Model.TotalCost zł</p>
                 <button type="button" class="btn btn-primary" onclick='changeTime()'>Ustaw datę</button>
-                <button style="margin-left: 30px" type="button" class="btn btn-primary" onclick='order()'>Zamów</button>
+                <button style="margin-left: 30px" type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Order", "Cart")'">Zamów</button>
+
+
+
             </div>
 
         </div>
