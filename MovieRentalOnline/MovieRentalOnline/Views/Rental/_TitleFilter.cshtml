@@ -1,0 +1,21 @@
+﻿
+    @{
+        Layout = null;
+    }
+
+    <div id="actorFilters" class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tytuły</h3>
+        </div>
+        <div class="panel-body" style="padding:5px;">
+            <div class="input-group">
+                <input id="title" type="search" name="title" data-autocomplete-source="@Url.Action("TitleSuggestions")" placeholder="Tytuł" />
+                <span class="input-group-btn" style="padding:0px;">
+                    <button class="btn btn-default button-small  btn-xs" type="button" onclick="Filtr();">Szukaj</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+

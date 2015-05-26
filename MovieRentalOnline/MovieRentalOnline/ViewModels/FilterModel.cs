@@ -7,6 +7,7 @@ namespace MovieRentalOnline.ViewModels
 {
     public class FilterModel
     {
+        public String Title { get; set; }
         public ICollection<GenreFilter> GenreFilter { get; set; }
         public ICollection<ActorFilter> ActorFilter { get; set; }
     }

@@ -60,6 +60,8 @@ namespace MovieRentalOnline.Controllers
                 {
                     movies = movies.Where(a => a.Genres.Any(b => Filters.GenreFilter.Any(c => c.Genre == b.GenreName))).ToList();
                 }
+                if (Filters.Title != null && Filters.Title != "")
+                    movies = movies.Where(a => a.Title.ToLower().Contains(Filters.Title.ToLower())).ToList();
                 return PartialView("_ResoultList", movies);
             }
             return View();
@@ -125,6 +127,20 @@ namespace MovieRentalOnline.Controllers
                 return RedirectToAction("List");
             else
                 return View(movie);
+        }
+
+        [ChildActionOnly]
+        public ActionResult TitleFilter()
+        {
+            return View("_TitleFilter");
+        }
+
+        public ActionResult TitleSuggestions(string term)
+        {
+            var movies = db.Movies.Where(a => a.Title.ToLower().Contains(term.ToLower())).ToList();
+            var movie = movies.Take(5).Select(a => new { label = (a.Title) });
+
+            return Json(movie, JsonRequestBehavior.AllowGet);
         }
 
         
