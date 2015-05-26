@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MovieRentalOnline.DAL;
+using MovieRentalOnline.Migrations;
 using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
@@ -104,6 +105,18 @@ namespace MovieRentalOnline.Controllers
             var userId = User.Identity.GetUserId();
 
             var order = db.Orders.OrderBy(x => x.OrderStatus).ToList();
+
+            return View(order);
+        }
+        [HttpPost]
+        [Authorize(Roles = "Admin, Worker")]
+        public ActionResult ManageOrders(int orderId)
+        {
+            RentalContext db = new RentalContext();
+            var order = db.Orders.Find(orderId);
+//            order.OrderStatus = 
+//            db.Entry().State = EntityState.Modified;
+//            await db.SaveChangesAsync();
 
             return View(order);
         }

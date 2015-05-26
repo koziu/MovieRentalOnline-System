@@ -24,53 +24,58 @@
                 </dd>
 
                 <dt>Status zamówienia:</dt>
-
-                if (item.OrderStatus == OrderStatus.InProgress || item.OrderStatus == OrderStatus.Sent)
-                {
-                    <dd style="color: yellow">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
-                else if (item.OrderStatus == OrderStatus.Canceled)
-                {
-                    <dd style="color: red">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
-                else if (item.OrderStatus == OrderStatus.Delivered)
-                {
-                    <dd style="color: green">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
-                else
-                {
-                    <dd style="color: blue">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
+               
+                using (Html.BeginForm("ManageOrders","Manage", item))
+                 {
+                     @Html.AntiForgeryToken()
+                     if (item.OrderStatus == OrderStatus.InProgress || item.OrderStatus == OrderStatus.Sent)
+                     {
+                         <dd style="color: yellow">
+                             @Html.DisplayName(item.OrderStatus.ToString())
+                             @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new {@class = "btn btn-default dropdown-toggle"})
+                         </dd>
+                     }
+                     else if (item.OrderStatus == OrderStatus.Canceled)
+                     {
+                         <dd style="color: red">
+                             @Html.DisplayName(item.OrderStatus.ToString())
+                             @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new {@class = "btn btn-default dropdown-toggle"})
+                         </dd>
+                     }
+                     else if (item.OrderStatus == OrderStatus.Delivered)
+                     {
+                         <dd style="color: green">
+                             @Html.DisplayName(item.OrderStatus.ToString())
+                             @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new {@class = "btn btn-default dropdown-toggle"})
+                         </dd>
+                     }
+                     else
+                     {
+                         <dd style="color: blue">
+                             @Html.DisplayName(item.OrderStatus.ToString())
+                             @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new {@class = "btn btn-default dropdown-toggle"})
+                         </dd>
+                     }
+                     <input type="submit" value="submit" class="btn btn-default"/>
+                 }
 
                 <dt>Data dostarczenia:</dt>
-                <dd>
-                    @Html.DisplayName(item.DeliveryTime.ToString())
-                </dd>
+                        <dd>
+                            @Html.DisplayName(item.DeliveryTime.ToString())
+                        </dd>
 
-                <dt>Data zwrotu:</dt>
-                <dd>
-                    @Html.DisplayName(item.ReturnTime.ToString())
-                </dd>
+                        <dt>Data zwrotu:</dt>
+                        <dd>
+                            @Html.DisplayName(item.ReturnTime.ToString())
+                        </dd>
 
-                <dt>Koszt całkowity:</dt>
-                <dd>
-                    @Html.DisplayName(item.Rents.Sum(x => x.SingleCost).ToString())
-                </dd>
+                        <dt>Koszt całkowity:</dt>
+                        <dd>
+                            @Html.DisplayName(item.Rents.Sum(x => x.SingleCost).ToString())
+                        </dd>
 
-                <br />
-                <br />
-            }
-        </dl>
+                        <br />
+                        <br />
+                        }
+</dl>
     </div>

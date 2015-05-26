@@ -454,9 +454,7 @@
     <Content Include="Views\Manage\ManageOrders.cshtml" />
     <Content Include="Views\Rental\_TitleFilter.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
