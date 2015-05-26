@@ -113,7 +113,15 @@ namespace MovieRentalOnline.Controllers
             }
             db.Orders.Add(order);
             db.SaveChanges();
-            
+
+            cart = new Cart();
+            cart.CartItems = new List<CartItem>();
+            var now = DateTime.Now.Date.AddHours(DateTime.Now.Hour);
+            cart.DeliveryTime = now.AddHours(2);
+            cart.ReturnTime = now.AddDays(1);
+            cart.TotalCost = 0;
+
+            this.sessionManager.Set("CartData", cart);          
             
             return View("_SuccesOrder", order);
         }
