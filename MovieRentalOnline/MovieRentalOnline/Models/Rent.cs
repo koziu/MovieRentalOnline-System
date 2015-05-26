@@ -11,6 +11,7 @@ namespace MovieRentalOnline.Models
         public int RentId { get; set; } //klucz glowny
         public int PhysicalProductId { get; set; }
         public int OrderId { get; set; }
+        public double SingleCost { get; set; }
         public RentStatus RentStatus { get; set; } //Dopóki nie wysłane, można zamienić płytę i wysłać inną, żeby lepiej planować wysyłanie
 
         public virtual PhysicalProduct PhysicalProduct { get; set; }

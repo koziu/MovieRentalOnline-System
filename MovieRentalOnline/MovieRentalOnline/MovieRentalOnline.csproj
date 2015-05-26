@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201505251526397_adres4.Designer.cs">
       <DependentUpon>201505251526397_adres4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505260756422_order.cs" />
+    <Compile Include="Migrations\201505260756422_order.Designer.cs">
+      <DependentUpon>201505260756422_order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Actor.cs" />
@@ -428,15 +432,13 @@
     </Content>
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Home\AdminPanel.cshtml" />
-
-    <Content Include="Views\Manage\ChangeEmail.cshtml" />
-
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Manage\_AddressPartial.cshtml" />
-
     <Content Include="Views\Manage\ChangeEmail.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Manage\_AddressPartial.cshtml" />
+    <Content Include="Views\Manage\ChangeEmail.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Manage\_AddressPartial.cshtml" />
+    <Content Include="Views\Cart\_SuccesOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />
@@ -461,6 +463,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505251526397_adres4.resx">
       <DependentUpon>201505251526397_adres4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505260756422_order.resx">
+      <DependentUpon>201505260756422_order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

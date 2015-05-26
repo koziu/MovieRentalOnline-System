@@ -1,0 +1,51 @@
+﻿@model MovieRentalOnline.Models.Order
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalInformation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalInformation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnTime)
+        </dd>
+
+       @* @foreach (var item in Model.Rents)
+        {
+            <dt>
+                @Html.DisplayNameFor(item => item.)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ReturnTime)
+            </dd>
+        }*@
+
+    </dl>
+</div>
