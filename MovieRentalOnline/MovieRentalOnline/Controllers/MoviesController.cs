@@ -50,7 +50,11 @@ namespace MovieRentalOnline.Controllers
                 new SelectList(db.Directors, "Id", "Name", "Surname");
             ViewBag.GenreId =
                 new SelectList(db.Genres, "Id", "GenreName");
-            return View();
+            MovieViewModel movie = new MovieViewModel();
+            movie.actorsList = db.Actors.ToList();
+            movie.directorsList = db.Directors.ToList();
+            movie.genresList = db.Genres.ToList();
+            return View(movie);
         }
 
         // POST: Movies/Create
