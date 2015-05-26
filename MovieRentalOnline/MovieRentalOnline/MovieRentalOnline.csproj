@@ -439,6 +439,8 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Manage\_AddressPartial.cshtml" />
     <Content Include="Views\Cart\_SuccesOrder.cshtml" />
+    <Content Include="Views\Manage\Orders.cshtml" />
+    <Content Include="Views\Manage\ManageOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\css\" />

@@ -5,7 +5,7 @@
     {
     @Html.AntiForgeryToken()      
     <ul class="nav navbar-nav navbar-right">
-    @if (User.IsInRole("Worker"))
+    @if (User.IsInRole("Worker") || User.IsInRole("Admin"))
     {
         <li role="presentation" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
@@ -13,8 +13,7 @@
             </a>
             <ul class="dropdown-menu" role="menu">
                 <li>@Html.ActionLink("Moje dane", "Index", "Manage")</li>
-                <li>@Html.ActionLink("Aktualne zamówienia", "Index", "Manage")</li>
-                <li>@Html.ActionLink("Historia zamówień", "Index", "Manage")</li>
+                <li>@Html.ActionLink("Przeglądaj zamówienia", "ManageOrders", "Manage")</li>
             </ul>
         </li>
     }
@@ -26,8 +25,8 @@
             </a>
             <ul class="dropdown-menu" role="menu">
                 <li>@Html.ActionLink("Moje dane", "Index", "Manage")</li>
-                <li>@Html.ActionLink("Moje zamówienia", "Index", "Manage")</li> 
-                <li>@Html.ActionLink("Historia zamówień", "Index", "Manage")</li>
+                <li>@Html.ActionLink("Moje zamówienia", "ActualOrders", "Manage")</li> 
+                <li>@Html.ActionLink("Historia zamówień", "AllOrders", "Manage")</li>
             </ul>
         </li>
     }        

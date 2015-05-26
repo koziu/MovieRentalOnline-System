@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -72,6 +73,39 @@ namespace MovieRentalOnline.Controllers
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
             };
             return View(model);
+        }
+
+        public ActionResult ActualOrders()
+        {
+            RentalContext db = new RentalContext();
+            var userId = User.Identity.GetUserId();
+
+            var orders = db.Orders
+                .Where(x => x.ClientId == userId)
+                .Where(x => x.OrderStatus != OrderStatus.Returned).ToList();
+
+            return View("orders", orders);
+        }
+
+        public ActionResult AllOrders()
+        {
+            RentalContext db = new RentalContext();
+            var userId = User.Identity.GetUserId();
+
+            var orders = db.Orders.Where(x => x.ClientId == userId).ToList();
+
+            return View("orders", orders);
+        }
+
+        [Authorize(Roles = "Admin, Worker")]
+        public ActionResult ManageOrders()
+        {
+            RentalContext db = new RentalContext();
+            var userId = User.Identity.GetUserId();
+
+            var order = db.Orders.OrderBy(x => x.OrderStatus).ToList();
+
+            return View(order);
         }
 
         //

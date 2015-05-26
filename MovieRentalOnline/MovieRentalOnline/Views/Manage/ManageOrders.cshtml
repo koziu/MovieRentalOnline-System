@@ -1,0 +1,76 @@
+﻿@using System.Activities.Expressions
+@using System.Data.SqlClient
+@using System.Net.Mime
+@using System.Reflection
+@using System.Runtime.CompilerServices
+@using Microsoft.Ajax.Utilities
+@using MovieRentalOnline.Models
+@model IEnumerable<MovieRentalOnline.Models.Order>
+
+    <div>
+        <h4>Lista zamówień:</h4>
+        
+        <dl class="dl-horizontal">
+            @foreach (var item in Model)
+            {
+                <dt>Id klienta</dt>
+                <dd>
+                    @Html.DisplayName(item.ClientId)
+                </dd>
+                
+                <dt>Id zamówienia</dt>
+                <dd>
+                    @Html.DisplayName(item.Rents.FirstOrDefault().OrderId.ToString())
+                </dd>
+
+                <dt>Status zamówienia:</dt>
+
+                if (item.OrderStatus == OrderStatus.InProgress || item.OrderStatus == OrderStatus.Sent)
+                {
+                    <dd style="color: yellow">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
+                    </dd>
+                }
+                else if (item.OrderStatus == OrderStatus.Canceled)
+                {
+                    <dd style="color: red">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
+                    </dd>
+                }
+                else if (item.OrderStatus == OrderStatus.Delivered)
+                {
+                    <dd style="color: green">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
+                    </dd>
+                }
+                else
+                {
+                    <dd style="color: blue">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
+                    </dd>
+                }
+
+                <dt>Data dostarczenia:</dt>
+                <dd>
+                    @Html.DisplayName(item.DeliveryTime.ToString())
+                </dd>
+
+                <dt>Data zwrotu:</dt>
+                <dd>
+                    @Html.DisplayName(item.ReturnTime.ToString())
+                </dd>
+
+                <dt>Koszt całkowity:</dt>
+                <dd>
+                    @Html.DisplayName(item.Rents.Sum(x => x.SingleCost).ToString())
+                </dd>
+
+                <br />
+                <br />
+            }
+        </dl>
+    </div>

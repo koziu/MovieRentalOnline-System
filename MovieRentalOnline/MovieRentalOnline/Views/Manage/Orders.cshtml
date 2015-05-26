@@ -1,0 +1,87 @@
+﻿@using System.Net.Mime
+@using Microsoft.Ajax.Utilities
+@using MovieRentalOnline.Models
+@model IEnumerable<MovieRentalOnline.Models.Order>
+
+    <div>
+        <h4>Twoje zamówienia:</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            @foreach (var item in Model)
+            {
+                <dt>Id zamówienia</dt>
+                <dd>
+                    @Html.DisplayName(item.Rents.FirstOrDefault().OrderId.ToString())
+                </dd>
+
+                <dt>Status zamówienia:</dt>
+                
+                if (item.OrderStatus == OrderStatus.InProgress || item.OrderStatus == OrderStatus.Sent)
+                {
+                    <dd style="color: yellow">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                    </dd>
+                }
+                else if (item.OrderStatus == OrderStatus.Canceled)
+                {
+                    <dd style="color: red">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                    </dd>
+                }
+                else if (item.OrderStatus == OrderStatus.Delivered)
+                {
+                    <dd style="color: green">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                    </dd>
+                }
+                else
+                {
+                    <dd style="color: blue">
+                        @Html.DisplayName(item.OrderStatus.ToString())
+                    </dd>
+                }
+
+            <dt>Data dostarczenia:</dt>
+                <dd>
+                    @Html.DisplayName(item.DeliveryTime.ToString())
+                </dd>
+
+                <dt>Data zwrotu:</dt>
+                <dd>
+                    @Html.DisplayName(item.ReturnTime.ToString())
+                </dd>
+
+                <dt>Koszt całkowity:</dt>
+                <dd>
+                    @Html.DisplayName(item.Rents.Sum(x => x.SingleCost).ToString())
+                </dd>
+
+                <br />
+                <br />
+
+                <dt><h5>Zamówione filmy:</h5></dt>
+                <dd>
+
+                    @foreach (var x in item.Rents)
+                    {
+                    <dt>Tytuł:</dt>
+                        <dd>
+                            @Html.DisplayName(x.PhysicalProduct.Product.Movie.Title)
+                        </dd>
+
+                        <dt>Nośnik:</dt>
+                        <dd>
+                            @Html.DisplayName(x.PhysicalProduct.Product.StorageMedium.Name)
+                        </dd>
+
+                        <dt>Cena nośnika:</dt>
+                        <dd>
+                            @Html.DisplayName(x.SingleCost.ToString())
+                        </dd>
+                        <br />
+                    }
+                </dd>
+                <hr />
+             }
+        </dl>
+    </div>
