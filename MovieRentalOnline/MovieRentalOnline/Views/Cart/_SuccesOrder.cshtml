@@ -1,23 +1,24 @@
 ﻿@model MovieRentalOnline.Models.Order
 
 <div>
-    <h4>Order</h4>
+    <h3>Order succeeded Thank You!</h3><br/>
+    <h4>Details:</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ClientId)
+            @Html.DisplayNameFor(model => model.OrderId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ClientId)
+            @Html.DisplayFor(model => model.OrderId)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AdditionalInformation)
+            @Html.DisplayNameFor(model => model.OrderStatus)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AdditionalInformation)
+            @Html.DisplayFor(model => model.OrderStatus)
         </dd>
 
         <dt>
@@ -35,17 +36,32 @@
         <dd>
             @Html.DisplayFor(model => model.ReturnTime)
         </dd>
+        <hr />
 
-       @* @foreach (var item in Model.Rents)
-        {
-            <dt>
-                @Html.DisplayNameFor(item => item.)
-            </dt>
+    @foreach (var x in Model.Rents)
+    {
+        <dt>
+            @Html.DisplayName("Title")
+        </dt>
+        <dd>
+            @Html.DisplayName(x.PhysicalProduct.Product.Movie.Title)
+        </dd>
 
+        <dt>
+            @Html.DisplayName("Medium")
+        </dt>
             <dd>
-                @Html.DisplayFor(model => model.ReturnTime)
-            </dd>
-        }*@
+            @Html.DisplayName(x.PhysicalProduct.Product.StorageMedium.Name)
+        </dd>
 
-    </dl>
+        <dt>
+                @Html.DisplayName("Price")
+        </dt>
+        <dd>
+            @Html.DisplayName(x.SingleCost.ToString())
+        </dd>
+        <br/>
+    }
+
+</dl>
 </div>
