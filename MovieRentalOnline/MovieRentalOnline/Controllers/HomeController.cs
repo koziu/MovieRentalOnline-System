@@ -8,7 +8,7 @@ namespace MovieRentalOnline.Controllers
     public class HomeController : Controller
     {
         private RentalContext db = new RentalContext();
-        [AdjustLayout]
+      
         public ActionResult Index()
         {
             // dodawanie n
@@ -19,7 +19,7 @@ namespace MovieRentalOnline.Controllers
             return View(db.Movies.ToList());
         }
 
-        [AdjustLayout]
+       
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -27,7 +27,7 @@ namespace MovieRentalOnline.Controllers
             return View();
         }
 
-        [AdjustLayout]
+      
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
