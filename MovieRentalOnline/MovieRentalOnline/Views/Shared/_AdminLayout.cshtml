@@ -45,7 +45,7 @@
                         <div class="accordion-group">
                             <div class="accordion-heading">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#">
-                                    <i class="icon-home"></i> Dashboard
+                                    @Html.ActionLink("Strona Główna", "Index", "Home", new { area = "" }, new { @class = "accordion-toggle" })
                                 </a>
                             </div>
                         </div>
@@ -135,10 +135,8 @@
                     </div>
                 </div><!--/span-->
 
-                <div class="col-md-6">
-                    <div class="container">
-                        @RenderBody()
-                    </div>
+                <div class="col-md-10">
+                 @RenderBody()
                 </div><!--/span-->
 
             </div><!--/row-->
