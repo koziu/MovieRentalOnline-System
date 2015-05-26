@@ -99,8 +99,22 @@ namespace MovieRentalOnline.Controllers
         }
 
         [Authorize(Roles = "Admin, Worker")]
-        public ActionResult ManageOrders()
+        public ActionResult ManageOrders(string status, int orderId)
         {
+            if (new HttpRequestWrapper(System.Web.HttpContext.Current.Request).IsAjaxRequest())
+            {
+                var statusEn = (OrderStatus)Enum.Parse(typeof(OrderStatus), status);
+
+                RentalContext dba = new RentalContext();
+                var ordera = dba.Orders.Find(orderId);
+                ordera.OrderId = orderId;
+                ordera.OrderStatus = statusEn;
+
+                dba.SaveChanges();
+                   
+                return new HttpStatusCodeResult(200);
+            }
+
             RentalContext db = new RentalContext();
             var userId = User.Identity.GetUserId();
 
@@ -108,18 +122,18 @@ namespace MovieRentalOnline.Controllers
 
             return View(order);
         }
-        [HttpPost]
-        [Authorize(Roles = "Admin, Worker")]
-        public ActionResult ManageOrders(int orderId)
-        {
-            RentalContext db = new RentalContext();
-            var order = db.Orders.Find(orderId);
-//            order.OrderStatus = 
-//            db.Entry().State = EntityState.Modified;
-//            await db.SaveChangesAsync();
 
-            return View(order);
-        }
+//        [Authorize(Roles = "Admin, Worker")]
+//        public ActionResult ManageOrders()
+//        {
+//
+//            RentalContext db = new RentalContext();
+//            var userId = User.Identity.GetUserId();
+//
+//            var order = db.Orders.OrderBy(x => x.OrderStatus).ToList();
+//
+//            return View(order);
+//        }
 
         //
         // POST: /Manage/RemoveLogin
