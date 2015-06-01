@@ -57,6 +57,7 @@ namespace MovieRentalOnline.Controllers
             {
                 db.Actors.Add(actor);
                 await db.SaveChangesAsync();
+                await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 

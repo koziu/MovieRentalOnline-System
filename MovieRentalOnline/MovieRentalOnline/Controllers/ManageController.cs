@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MovieRentalOnline.DAL;
+using MovieRentalOnline.Migrations;
 using MovieRentalOnline.Models;
 
 namespace MovieRentalOnline.Controllers
@@ -107,6 +108,33 @@ namespace MovieRentalOnline.Controllers
 
             return View(order);
         }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin, Worker")]
+        public ActionResult ManageOrders(string status, int orderId)
+        {
+            if (new HttpRequestWrapper(System.Web.HttpContext.Current.Request).IsAjaxRequest())
+            {
+                var statusEn = (OrderStatus)Enum.Parse(typeof(OrderStatus), status);
+
+                RentalContext dba = new RentalContext();
+                var ordera = dba.Orders.Find(orderId);
+                ordera.OrderId = orderId;
+                ordera.OrderStatus = statusEn;
+
+                dba.SaveChanges();
+
+                return new HttpStatusCodeResult(200);
+            }
+
+            RentalContext db = new RentalContext();
+            var userId = User.Identity.GetUserId();
+
+            var order = db.Orders.OrderBy(x => x.OrderStatus).ToList();
+
+            return View(order);
+        }
+
 
         //
         // POST: /Manage/RemoveLogin

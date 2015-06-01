@@ -1,76 +1,86 @@
-﻿@using System.Activities.Expressions
-@using System.Data.SqlClient
-@using System.Net.Mime
-@using System.Reflection
-@using System.Runtime.CompilerServices
-@using Microsoft.Ajax.Utilities
-@using MovieRentalOnline.Models
+﻿@using MovieRentalOnline.Models
 @model IEnumerable<MovieRentalOnline.Models.Order>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-    <div>
-        <h4>Lista zamówień:</h4>
+<div>
+    <h4>Lista zamówień:</h4>
         
-        <dl class="dl-horizontal">
-            @foreach (var item in Model)
-            {
-                <dt>Id klienta</dt>
-                <dd>
-                    @Html.DisplayName(item.ClientId)
-                </dd>
+    <dl class="dl-horizontal">
+        @foreach (var item in Model)
+        {
+            <dt>Id klienta</dt>
+            <dd>
+                @Html.DisplayName(item.ClientId)
+            </dd>
                 
-                <dt>Id zamówienia</dt>
-                <dd>
-                    @Html.DisplayName(item.Rents.FirstOrDefault().OrderId.ToString())
-                </dd>
+            <dt>Id zamówienia</dt>
+            <dd>
+                @Html.DisplayName(item.Rents.FirstOrDefault().OrderId.ToString())
+            </dd>
 
-                <dt>Status zamówienia:</dt>
+            <dt>Status zamówienia:</dt>
+            <dd>     
+                <select class="form-control" id="@item.OrderId">
+                    @if (item.OrderStatus == OrderStatus.Canceled) {<option selected="selected">@OrderStatus.Canceled</option>}
+                    else {<option>@OrderStatus.Canceled</option>}
+                                                                                          
+                    @if(item.OrderStatus == OrderStatus.Delivered) {<option selected="selected">@OrderStatus.Delivered</option>}
+                    else {<option>@OrderStatus.Delivered</option>}
 
-                if (item.OrderStatus == OrderStatus.InProgress || item.OrderStatus == OrderStatus.Sent)
-                {
-                    <dd style="color: yellow">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
-                else if (item.OrderStatus == OrderStatus.Canceled)
-                {
-                    <dd style="color: red">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
-                else if (item.OrderStatus == OrderStatus.Delivered)
-                {
-                    <dd style="color: green">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
-                else
-                {
-                    <dd style="color: blue">
-                        @Html.DisplayName(item.OrderStatus.ToString())
-                        @Html.EnumDropDownListFor(x => x.FirstOrDefault().OrderStatus, new { @class = "btn btn-default dropdown-toggle" })
-                    </dd>
-                }
+                    @if(item.OrderStatus == OrderStatus.InProgress) {<option selected="selected" value="@OrderStatus.InProgress">@OrderStatus.InProgress</option>}
+                    else {<option>@OrderStatus.InProgress</option>}
 
-                <dt>Data dostarczenia:</dt>
-                <dd>
-                    @Html.DisplayName(item.DeliveryTime.ToString())
-                </dd>
+                    @if(item.OrderStatus == OrderStatus.Returned) {<option selected="selected">@OrderStatus.Returned</option>}
+                    else {<option>@OrderStatus.Returned</option>}
 
-                <dt>Data zwrotu:</dt>
-                <dd>
-                    @Html.DisplayName(item.ReturnTime.ToString())
-                </dd>
+                    @if(item.OrderStatus == OrderStatus.Sent) {<option selected="selected">@OrderStatus.Sent</option>}
+                    else {<option>@OrderStatus.Sent</option>}
+                </select>
+                <input type="submit" value="submit" class="btn btn-default" id="@item.OrderId" />
+            </dd>
 
-                <dt>Koszt całkowity:</dt>
-                <dd>
-                    @Html.DisplayName(item.Rents.Sum(x => x.SingleCost).ToString())
-                </dd>
+            <dt>Data dostarczenia:</dt>
+            <dd>
+                @Html.DisplayName(item.DeliveryTime.ToString())
+            </dd>
 
-                <br />
-                <br />
+            <dt>Data zwrotu:</dt>
+            <dd>
+                @Html.DisplayName(item.ReturnTime.ToString())
+            </dd>
+
+            <dt>Koszt całkowity:</dt>
+            <dd>
+                @Html.DisplayName(item.Rents.Sum(x => x.SingleCost).ToString())
+            </dd>
+
+            <br />
+            <br />
+        }
+    </dl>
+</div>
+<script>
+    function sendData(orderId, status) {
+        $.ajax({
+            url: "/Manage/ManageOrders/",
+            type: "POST",
+            data: {
+                status: status,
+                orderId: orderId
+            },
+            success: function(data) {
+                alert("zajebiscie, udalo sie kurwa!");
+            },
+            error: function (err) {
+                alert("error - " + err);
             }
-        </dl>
-    </div>
+        });
+    }
+    $(function() {
+        $(".btn").on("click", function() {
+            var orderId=$(this).attr("id");
+            var status = $(this).parent().find("select:first").val();
+            sendData(orderId, status);
+        });
+    });
+</script>
