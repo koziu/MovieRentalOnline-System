@@ -5,10 +5,11 @@ using MovieRentalOnline.DAL;
 
 namespace MovieRentalOnline.Controllers
 {
+       [AdjustLayout]
     public class HomeController : Controller
     {
         private RentalContext db = new RentalContext();
-      
+        
         public ActionResult Index()
         {
             // dodawanie n
