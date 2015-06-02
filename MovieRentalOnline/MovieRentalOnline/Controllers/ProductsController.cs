@@ -15,7 +15,7 @@ namespace MovieRentalOnline.Controllers
     [Authorize(Roles = "Admin")]
     public class ProductsController : Controller     
     {
-        private Product product;
+        
         private RentalContext db = new RentalContext();
 
         // GET: Products
