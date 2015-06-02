@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using MovieRentalOnline.CustomAtributes;
 using MovieRentalOnline.DAL;
 using MovieRentalOnline.Migrations;
 using MovieRentalOnline.Models;
@@ -16,6 +17,7 @@ using MovieRentalOnline.Models;
 namespace MovieRentalOnline.Controllers
 {
     [Authorize]
+    [AdjustLayout]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;

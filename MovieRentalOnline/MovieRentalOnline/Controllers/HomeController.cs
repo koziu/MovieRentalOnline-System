@@ -5,7 +5,7 @@ using MovieRentalOnline.DAL;
 
 namespace MovieRentalOnline.Controllers
 {
-       [AdjustLayout]
+      
     public class HomeController : Controller
     {
         private RentalContext db = new RentalContext();
@@ -20,7 +20,7 @@ namespace MovieRentalOnline.Controllers
             return View(db.Movies.ToList());
         }
 
-       
+       [AdjustLayout]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -28,14 +28,14 @@ namespace MovieRentalOnline.Controllers
             return View();
         }
 
-      
+      [AdjustLayout]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
-
+        [AdjustLayout]
         [Authorize(Roles = "Admin")]
         public ActionResult AdminPanel()
         {
