@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MovieRentalOnline.DAL;
@@ -135,6 +136,51 @@ namespace MovieRentalOnline.Controllers
             return View(order);
         }
 
+        [Authorize(Roles = "Admin")]
+        public ActionResult ManageAccounts()
+        {
+            var context = new ApplicationDbContext();
+            var users = context.Users.ToList();
+
+            return View(users);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public ActionResult ManageAccounts(string userId, string status)
+        {
+            var context = new ApplicationDbContext();
+            if (new HttpRequestWrapper(System.Web.HttpContext.Current.Request).IsAjaxRequest())
+            {
+                var user = context.Users.First(x => x.Id == status);
+                var logins = user.Logins;
+
+                foreach (var login in logins.ToList())
+                {
+                    UserManager.RemoveLogin(login.UserId, new UserLoginInfo(login.LoginProvider, login.ProviderKey));
+                }
+
+                var roles = context.Roles;
+
+                foreach (var role in roles)
+                {
+                    if (role.Id == status)
+                    {
+                        UserManager.RemoveFromRole(user.Id, role.Id);
+                    }
+                }
+
+                context.Users.Attach(user);
+                context.Users.Remove(user);
+                context.SaveChanges();
+
+                return new HttpStatusCodeResult(200);
+            }   
+
+            var users = context.Users.ToList();
+
+            return View(users);
+        }
 
         //
         // POST: /Manage/RemoveLogin
@@ -367,6 +413,7 @@ namespace MovieRentalOnline.Controllers
             // Request a redirect to the external login provider to link a login for the current user
             return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult UpdateAddress(UserAddress model)

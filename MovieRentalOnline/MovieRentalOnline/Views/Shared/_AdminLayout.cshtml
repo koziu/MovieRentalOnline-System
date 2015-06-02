@@ -85,6 +85,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#leftMenu" href="#collapseFour">
+                                    <i class="icon-th"></i> Zarządzaj kontami
+                                </a>
+                            </div>
+                            <div id="collapseFour" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                    <ul>
+                                        <li>@Html.ActionLink("Dodaj konto", "AddAccount", "Account")</li>
+                                        <li>@Html.ActionLink("Usuń konto", "ManageAccounts", "Manage")</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                        
                    
                     </div>

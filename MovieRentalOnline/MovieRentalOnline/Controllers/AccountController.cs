@@ -182,10 +182,6 @@ namespace MovieRentalOnline.Controllers
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
-                    // Add role to new user
-                    /*var context = new ApplicationDbContext();
-                    var roleStore = new RoleStore<IdentityRole>(context);
-                    var roleManager = new RoleManager<IdentityRole>(roleStore);*/
                     UserManager.AddToRole(user.Id, "Client");
 
                     return RedirectToAction("Index", "Home");
@@ -195,6 +191,48 @@ namespace MovieRentalOnline.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult> AddAccount(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser {UserName = model.Email, Email = model.Email};
+                var result = await UserManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    RentalContext db = new RentalContext();
+                    var userAdresPrimary = new UserAddress()
+                    {
+                        IsPrimary = true,
+                        UserId = user.Id,
+                        City = model.City,
+                        CityPostal = model.CityPostal,
+                        Country = model.Country,
+                        HomeNo = model.HomeNo,
+                        Postal = model.Postal,
+                        Street = model.Street,
+                        Phone = model.Phone
+                    };
+                    var userAdresSecondary = new UserAddress()
+                    {
+                        IsPrimary = false,
+                        UserId = user.Id
+                    };
+                    db.UserAddresses.Add(userAdresPrimary);
+                    db.UserAddresses.Add(userAdresSecondary);
+                    await db.SaveChangesAsync();
+
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
+                    UserManager.AddToRole(user.Id, "Worker");
+
+                    return RedirectToAction("Index", "Home");
+                }
+                AddErrors(result);
+            }
+            return View("Register", model);
         }
 
         //

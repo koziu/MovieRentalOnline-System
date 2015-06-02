@@ -478,6 +478,7 @@
     <Content Include="Views\Manage\Orders.cshtml" />
     <Content Include="Views\Manage\ManageOrders.cshtml" />
     <Content Include="Views\Rental\_TitleFilter.cshtml" />
+    <Content Include="Views\Manage\ManageAccounts.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
